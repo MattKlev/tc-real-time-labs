@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{c6961578-a6b4-4672-aad6-a12fe19225da}">
-    <Declaration><![CDATA[PROGRAM MAIN
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{c6961578-a6b4-4672-aad6-a12fe19225da}" SpecialFunc="None">
+    <Declaration><![CDATA[//PLC 2
+PROGRAM MAIN
 VAR
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[F_ConsumeTime(400);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

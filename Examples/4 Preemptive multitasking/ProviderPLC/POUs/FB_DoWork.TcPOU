@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="FB_DoWork" Id="{2ab00ae1-5d1d-4c1b-b03f-8fbf1ff0b8b3}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'c++_compatible'}
+FUNCTION_BLOCK FB_DoWork EXTENDS TcBaseModuleRegistered IMPLEMENTS I_DoWork
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="FB_reinit" Id="{9053b03d-8ede-4a48-b24f-aff7895ba10c}">
+      <Declaration><![CDATA[METHOD FB_reinit : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[SUPER^.FB_reinit();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_Increment" Id="{f67746c2-42d3-45f0-81a3-8096efda097c}">
+      <Declaration><![CDATA[{attribute 'TcTypeSystem'}
+{attribute 'c++_compatible'}
+{attribute 'minimal_input_size' := '4'}
+{attribute 'pack_mode' := '4'}
+METHOD M_Increment : Global.HRESULT
+VAR_INST
+	fbCrititcalSection : FB_IecCriticalSection;
+	fbRTMon_LogMark	   : FB_RTMon_LogMark;
+	_counter		   : UDINT;	
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF fbCrititcalSection.Enter() THEN
+	(* start of critical section *)
+	fbRTMon_LogMark.LogStart(0, 0);
+	_counter := _counter + 1;
+	F_ConsumeTime(100);
+	M_Increment := S_OK;
+	fbRTMon_LogMark.LogStop(0, 0);
+
+	(* end of critical section *)
+	fbCrititcalSection.Leave();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="TcQueryInterface" Id="{7ae69c2f-9bc2-4d19-b54e-9c7ca1339714}">
+      <Declaration><![CDATA[{attribute 'minimal_input_size' := '4'}
+{attribute 'pack_mode' := '4'}
+{attribute 'c++_compatible'}
+METHOD TcQueryInterface : Tc3_Module.HRESULT
+VAR_INPUT
+	iid	   : REFERENCE TO Tc3_Module.IID;
+	pipItf : POINTER TO Tc3_Module.PVOID;
+END_VAR
+
+VAR
+	ipDoWork : I_DoWork;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF GuidsEqual(ADR(iid), ADR(TC_GLOBAL_IID_LIST.IID_I_DoWork)) THEN
+	ipDoWork := THIS^; // cast to interface pointer
+	pipItf^ := ITCUNKNOWN_TO_PVOID(ipDoWork);
+	TcAddRef();
+	TcQueryInterface := S_OK;
+ELSE
+	TcQueryInterface := SUPER^.TcQueryInterface(iid, pipItf);
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

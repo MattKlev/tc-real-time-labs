@@ -1,13 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{aa6faac5-59e2-4e44-874e-88235478ca6b}">
-    <Declaration><![CDATA[PROGRAM MAIN
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{aa6faac5-59e2-4e44-874e-88235478ca6b}" SpecialFunc="None">
+    <Declaration><![CDATA[//PLC 1
+PROGRAM MAIN
 VAR
-END_VAR
-]]>
-    </Declaration>
+	DelayToCallInterface : UDINT := 20;//Set to 20 microseconds to cause PLC2 to jump in and start executing. 20 Microseconds gives enough time to ensure that the provider PLC gets to call the global FB_DoWork.M_Increment method before PLC1 trys to call it. 
+	fbDoWorkProxy		 : FB_DoWorkProxy;
+END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[F_ConsumeTime(DelayToCallInterface);
+
+IF fbDoWorkProxy.ip = 0 THEN
+	fbDoWorkProxy.GetInterfacePointer();
+	RETURN;
+END_IF
+
+fbDoWorkProxy.ip.M_Increment();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

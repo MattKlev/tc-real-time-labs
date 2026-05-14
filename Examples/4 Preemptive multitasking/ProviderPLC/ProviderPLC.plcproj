@@ -3,31 +3,32 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{d2cc8549-6b27-456b-bb5e-e6a341a73f5a}</ProjectGuid>
+    <ProjectGuid>{241fed72-efe0-4363-a4c9-57ba93a8b005}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>PLC1</Name>
+    <Name>ProviderPLC</Name>
     <ProgramVersion>3.1.4026.22</ProgramVersion>
-    <Application>{412f88c4-636a-408b-99ec-2c052e303bb2}</Application>
-    <TypeSystem>{1f5a2f9c-5293-44f8-9833-6a697234e1f9}</TypeSystem>
-    <Implicit_Task_Info>{6dee45ea-31a2-478c-adf9-9680f3f5db61}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{56b1822d-69c7-425e-8a94-4729b6a41b45}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{360514c1-2538-4185-ab36-177244fcfd86}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{2a32a80f-8179-4c28-bcfe-db29b33750cc}</LibraryReferences>
+    <Application>{6f4970bf-cec9-4203-ad69-3062bd31704c}</Application>
+    <TypeSystem>{528ce137-0268-457f-aa50-12ec9e2fa48e}</TypeSystem>
+    <Implicit_Task_Info>{9c92826d-0529-4184-8c27-2bd1bb06feb1}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{428e0fbb-fb57-4753-8d10-05247c751bd6}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{1165bba4-8368-4945-a299-15ab284875bd}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{03c18441-b304-4908-81eb-8d7f7fbf62dc}</LibraryReferences>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PlcTask.TcTTO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\FB_DoWorkProxy.TcPOU">
+    <Compile Include="POUs\FB_DoWork.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\F_ConsumeTime.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProviderPLC.TcTTO">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -52,17 +53,26 @@
       <Namespace>Tc3_Module</Namespace>
       <SystemLibrary>true</SystemLibrary>
     </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_RealtimeMonitoring">
+      <DefaultResolution>Tc3_RealtimeMonitoring, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_RealtimeMonitoring</Namespace>
+    </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PLC1.tmc">
+    <None Include="ProxyPLC.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProviderPLC.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
@@ -2617,16 +2627,16 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Boolean">System.Boolean</Type>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="Int32">System.Int32</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-    <Type n="UInt32">System.UInt32</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Boolean">System.Boolean</Type>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="Int32">System.Int32</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+          <Type n="UInt32">System.UInt32</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>
