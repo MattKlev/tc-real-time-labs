@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <Task Name="IsolatedCoreTask" Id="{137ff9cd-e2f8-45fa-b2ed-782f0445a352}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>2</Priority>
+    <PouCall>
+      <Name>PRG_IsolatedCore</Name>
+    </PouCall>
+    <TaskFBGuid>{2a2fff46-d000-4bad-9e33-3857194b68e3}</TaskFBGuid>
+    <Fb_init>{cfd80a88-10a2-479f-87b5-a05010b9d5ab}</Fb_init>
+    <Fb_exit>{57678c7e-f537-4200-b58a-3e777d6bd0c1}</Fb_exit>
+    <CycleUpdate>{79825862-f650-472e-b0d1-8f189406d47e}</CycleUpdate>
+    <PostCycleUpdate>{15d042e6-658a-463d-8722-6b7db3f839d7}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

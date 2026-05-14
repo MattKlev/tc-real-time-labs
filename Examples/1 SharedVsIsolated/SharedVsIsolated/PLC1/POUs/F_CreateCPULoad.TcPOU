@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="F_CreateCPULoad" Id="{f08d8778-a655-42c2-8399-27c150c00314}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_CreateCPULoad
+VAR_INPUT
+	nIterations : DINT := 300000; (* Tune this to adjust load *)
+END_VAR
+
+VAR
+	iIter  : DINT;
+	fAccum : LREAL := 0.0;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FOR iIter := 1 TO nIterations DO
+	fAccum := fAccum + SQRT(DINT_TO_LREAL(iIter));
+END_FOR]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

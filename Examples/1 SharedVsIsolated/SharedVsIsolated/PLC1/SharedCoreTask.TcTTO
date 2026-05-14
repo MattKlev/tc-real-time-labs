@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <Task Name="SharedCoreTask" Id="{4de5b423-c330-4dd1-a3fb-93dfb49b0459}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>1</Priority>
+    <PouCall>
+      <Name>PRG_SharedCore</Name>
+    </PouCall>
+    <TaskFBGuid>{a58a5603-3cf5-4e28-80fd-f102c11e012f}</TaskFBGuid>
+    <Fb_init>{d7072a8d-e021-427f-9f71-fb8c108b0713}</Fb_init>
+    <Fb_exit>{b04cf20a-d0d2-4f5e-b00c-af06556d8617}</Fb_exit>
+    <CycleUpdate>{2b1481e3-fa79-45a4-a7c9-bc890eb1ad37}</CycleUpdate>
+    <PostCycleUpdate>{57b12c88-55ff-4243-a9d8-7f0ccd1296e3}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.21.30" creationDateTime="2026-05-11T22:43:57.9622111" />
+  <contentHeader name="PLC1" modificationDateTime="2026-05-11T22:43:57.9622111">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="F_ConsumeTime" pouType="function">
+        <interface>
+          <inputVars>
+            <variable name="Us">
+              <type>
+                <UDINT />
+              </type>
+            </variable>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_ConsumeTime
+VAR_INPUT
+	Us		:UDINT;
+END_VAR
+VAR
+		tCurr, tEnd : T_DCTIME64;
+END_VAR</xhtml>
+                </InterfaceAsPlainText>
+              </data>
+            </addData>
+          </inputVars>
+          <localVars>
+            <variable name="tCurr">
+              <type>
+                <derived name="T_DCTIME64" />
+              </type>
+            </variable>
+            <variable name="tEnd">
+              <type>
+                <derived name="T_DCTIME64" />
+              </type>
+            </variable>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_ConsumeTime
+VAR_INPUT
+	Us		:UDINT;
+END_VAR
+VAR
+		tCurr, tEnd : T_DCTIME64;
+END_VAR</xhtml>
+                </InterfaceAsPlainText>
+              </data>
+            </addData>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">tCurr := F_GetActualDcTime64();
+tEnd  := tCurr + (Us * EC_DCTIME_TICKSPERMSEC64 / 1000);
+WHILE (tCurr &lt; tEnd) DO
+	tCurr := F_GetActualDcTime64();
+END_WHILE
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_ConsumeTime
+VAR_INPUT
+	Us		:UDINT;
+END_VAR
+VAR
+		tCurr, tEnd : T_DCTIME64;
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>cb02adaf-01e7-4502-8f53-ec969d000c81</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="F_ConsumeTime" ObjectId="cb02adaf-01e7-4502-8f53-ec969d000c81" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.21.30" creationDateTime="2026-05-11T22:43:36.8488113" />
+  <contentHeader name="PLC1" modificationDateTime="2026-05-11T22:43:36.8527705">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="F_CreateCPULoad" pouType="function">
+        <interface>
+          <inputVars>
+            <variable name="nIterations">
+              <type>
+                <DINT />
+              </type>
+              <initialValue>
+                <simpleValue value="500000" />
+              </initialValue>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> Tune this to adjust load </xhtml>
+              </documentation>
+            </variable>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_CreateCPULoad
+VAR_INPUT
+	nIterations : DINT := 500000; (* Tune this to adjust load *)
+END_VAR
+
+VAR
+	iIter  : DINT;
+	fAccum : LREAL := 0.0;
+END_VAR</xhtml>
+                </InterfaceAsPlainText>
+              </data>
+            </addData>
+          </inputVars>
+          <localVars>
+            <variable name="iIter">
+              <type>
+                <DINT />
+              </type>
+            </variable>
+            <variable name="fAccum">
+              <type>
+                <LREAL />
+              </type>
+              <initialValue>
+                <simpleValue value="0.0" />
+              </initialValue>
+            </variable>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_CreateCPULoad
+VAR_INPUT
+	nIterations : DINT := 500000; (* Tune this to adjust load *)
+END_VAR
+
+VAR
+	iIter  : DINT;
+	fAccum : LREAL := 0.0;
+END_VAR</xhtml>
+                </InterfaceAsPlainText>
+              </data>
+            </addData>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">FOR iIter := 1 TO nIterations DO
+	fAccum := fAccum + SQRT(DINT_TO_LREAL(iIter));
+END_FOR</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_CreateCPULoad
+VAR_INPUT
+	nIterations : DINT := 500000; (* Tune this to adjust load *)
+END_VAR
+
+VAR
+	iIter  : DINT;
+	fAccum : LREAL := 0.0;
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>f08d8778-a655-42c2-8399-27c150c00314</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="F_CreateCPULoad" ObjectId="f08d8778-a655-42c2-8399-27c150c00314" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.22" ClassName="CNestedPlcProjDef">
+	<Project GUID="{241FED72-EFE0-4363-A4C9-57BA93A8B005}" Name="ProxyPLC" PrjFilePath="..\..\ProxyPLC\ProxyPLC.plcproj" TmcFilePath="..\..\ProxyPLC\ProxyPLC.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance File="ProxyPLC Instance.xti"/>
+	</Project>
+</TcSmItem>

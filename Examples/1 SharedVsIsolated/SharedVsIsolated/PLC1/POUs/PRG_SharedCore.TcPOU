@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_SharedCore" Id="{89a2c607-fd4b-45ff-adb0-14a7981190a3}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_SharedCore
+VAR
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_CreateCPULoad();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
