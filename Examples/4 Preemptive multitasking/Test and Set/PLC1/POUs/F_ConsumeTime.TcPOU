@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="F_ConsumeTime" Id="{81ad16b1-dbae-47a6-8f66-0519b3e0ac0a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_ConsumeTime
+VAR_INPUT
+	Us		:UDINT;
+END_VAR
+VAR
+		tCurr, tEnd : T_DCTIME64;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[tCurr := F_GetActualDcTime64();
+tEnd  := tCurr + (Us * EC_DCTIME_TICKSPERMSEC64 / 1000);
+WHILE (tCurr < tEnd) DO
+	tCurr := F_GetActualDcTime64();
+END_WHILE
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_Task1" Id="{74eb5fcd-9447-4a23-89cf-21a81fe31a26}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Task1
+VAR
+	{attribute 'displaymode':='hex'}
+	CallingTaskAdsPort	 : UINT;
+	nLocalBlockedCounter : DINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CallingTaskAdsPort := _TaskInfo[GETCURTASKINDEXEX()].AdsPort;
+WHILE NOT (TestAndSet(GVL.bGlobalTestFlag)) DO //Spin
+	nLocalBlockedCounter := nLocalBlockedCounter + 1; 
+END_WHILE
+
+(* bGlobalTestFlag was FALSE, nobody was blocking, NOW
+    bGlobalTestFlag is set to TRUE and blocking others *)
+GVL.fbDoWork.M_ConsumeTime(CallerTaskAdsPort := CallingTaskAdsPort);
+
+(* remove blocking by resetting the flag *)
+GVL.bGlobalTestFlag := FALSE;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

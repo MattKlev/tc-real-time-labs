@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <GVL Name="GVL" Id="{08c9c7ae-b5f9-4e95-b73b-d20c5ca43128}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	bGlobalTestFlag : BOOL;
+	fbDoWork		: FB_DoWork;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

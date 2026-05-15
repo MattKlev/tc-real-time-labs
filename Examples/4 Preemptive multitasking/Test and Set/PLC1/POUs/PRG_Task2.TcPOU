@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_Task2" Id="{37869fa8-d964-4ee7-9c65-026bf9e62e34}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Task2
+VAR
+	//Just another task on the same core as task 1 to show the
+	//scedular executing another task if task 1 gets blocked
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_ConsumeTime(400);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

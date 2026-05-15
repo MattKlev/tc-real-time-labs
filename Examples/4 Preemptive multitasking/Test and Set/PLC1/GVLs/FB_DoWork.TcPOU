@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="FB_DoWork" Id="{fdd8d320-d86d-45ca-89fd-e20a01bfe114}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_DoWork
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="M_ConsumeTime" Id="{57505c6f-4d23-40e1-aa82-1354117ea6a0}">
+      <Declaration><![CDATA[METHOD M_ConsumeTime : Global.HRESULT
+VAR_INPUT
+	CallerTaskAdsPort : UINT;
+END_VAR
+
+VAR_INST
+	fbRTMon_LogMark : FB_RTMon_LogMark;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[fbRTMon_LogMark.LogStart(CallerTaskAdsPort, 0);
+F_ConsumeTime(100);
+fbRTMon_LogMark.LogStop(CallerTaskAdsPort, 0);]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

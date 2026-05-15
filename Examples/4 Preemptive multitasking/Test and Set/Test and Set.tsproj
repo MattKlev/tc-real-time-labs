@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.22">
+	<Project ProjectGUID="{1422B24D-5DA8-4EFB-AB30-81064EB4EE38}" TargetNetId="192.168.1.102.1.1" Target64Bit="true" ShowHideConfigurations="#x3c7">
+		<System>
+			<Settings MaxCpus="4" NonWinCpus="2">
+				<Cpu CpuId="1"/>
+				<Cpu CpuId="2"/>
+				<Cpu CpuId="3"/>
+				<IoIdleTask Affinity="#x00000002"/>
+			</Settings>
+			<Tasks>
+				<Task Id="2" Priority="20" CycleTime="100000" AmsPort="350" Affinity="#x00000008" AdtTasks="true">
+					<Name>Task1</Name>
+				</Task>
+				<Task Id="3" Priority="21" CycleTime="100000" AmsPort="351" Affinity="#x00000008" AdtTasks="true">
+					<Name>Task2</Name>
+				</Task>
+				<Task Id="4" Priority="13" CycleTime="100000" AmsPort="352" Affinity="#x00000004" AdtTasks="true">
+					<Name>Task3</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project File="PLC1.xti"/>
+			<PlcAuxTask Affinity="#x00000002"/>
+		</Plc>
+	</Project>
+</TcSmProject>
