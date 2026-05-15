@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_Task3" Id="{f6513162-bf51-4efc-9900-3629ed9bc665}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Task3
+VAR
+	{attribute 'displaymode':='hex'} 
+	CallingTaskAdsPort :UINT;	
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CallingTaskAdsPort:=_TaskInfo[GETCURTASKINDEXEX()].AdsPort;
+
+IF GVL.fbCrititcalSection.Enter() THEN
+	(* start of critical section *)
+	GVL.fbDoWork.M_ConsumeTime(CallerTaskAdsPort :=CallingTaskAdsPort );
+
+	(* end of critical section *)
+	GVL.fbCrititcalSection.Leave();
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

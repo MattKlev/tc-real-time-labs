@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_Task1" Id="{aa6faac5-59e2-4e44-874e-88235478ca6b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Task1
+VAR
+	{attribute 'displaymode':='hex'} 
+	CallingTaskAdsPort :UINT;
+END_VAR
+VAR CONSTANT
+//10 Microseconds gives enough time to ensure that Task 3 calls
+//GVL.fbDoWork.M_Increment method before Task1.	
+	DelayToCallInterface : UDINT := 10; 	
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_ConsumeTime(DelayToCallInterface);
+
+CallingTaskAdsPort:=_TaskInfo[GETCURTASKINDEXEX()].AdsPort;
+
+IF GVL.fbCrititcalSection.Enter() THEN
+	(* start of critical section *)
+	GVL.fbDoWork.M_ConsumeTime(CallerTaskAdsPort :=CallingTaskAdsPort );
+
+	(* end of critical section *)
+	GVL.fbCrititcalSection.Leave();
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

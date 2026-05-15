@@ -1,23 +1,5 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.22">
-	<DataTypes>
-		<DataType>
-			<Name GUID="{33DBDA1E-3183-46A9-B784-B780B88F3750}" PersistentType="true">I_DoWork</Name>
-			<BitSize X64="64">32</BitSize>
-			<BaseType GUID="{00000001-0000-0000-E000-000000000064}">ITcUnknown</BaseType>
-			<Method>
-				<Name>M_Increment</Name>
-				<ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
-				<ReturnBitSize>32</ReturnBitSize>
-			</Method>
-			<Hides>
-				<Hide GUID="{D7D0C120-4C47-4C43-8246-65075B7B36FF}"/>
-				<Hide GUID="{2CE25FC0-E422-4417-8963-22D8AD784409}"/>
-				<Hide GUID="{08558623-94D1-49B4-82D7-F253EF0169DF}"/>
-				<Hide GUID="{E4844111-CAED-45CD-8CA7-35A69E9F6EB6}"/>
-			</Hides>
-		</DataType>
-	</DataTypes>
 	<Project ProjectGUID="{2C917DC0-A730-4783-84EB-5DE5E5D576E3}" TargetNetId="192.168.1.102.1.1" Target64Bit="true" SaveToTarget="false" HideSaveToTarget="true" ShowHideConfigurations="#x3c7">
 		<System>
 			<Settings MaxCpus="4" NonWinCpus="2">
@@ -28,25 +10,19 @@
 			</Settings>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" Affinity="#x00000008" AdtTasks="true">
-					<Name>Plc1Task</Name>
+					<Name>Task1</Name>
 				</Task>
 				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" Affinity="#x00000008" AdtTasks="true">
-					<Name>Plc2Task</Name>
+					<Name>Task2</Name>
 				</Task>
 				<Task Id="5" Priority="13" CycleTime="100000" AmsPort="352" Affinity="#x00000004" AdtTasks="true">
-					<Name>ProviderPLC</Name>
+					<Name>Task3</Name>
 				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project File="PLC1.xti"/>
-			<Project File="PLC2.xti"/>
-			<Project File="ProviderPLC.xti"/>
 			<PlcAuxTask Affinity="#x00000002"/>
 		</Plc>
-		<Io/>
 	</Project>
-	<Mappings>
-		<MappingInfo Identifier="{08502081-2001-0850-8020-500800205008}" Id="#x02030010" Watchdog="04000000040000000400000004000000"/>
-	</Mappings>
 </TcSmProject>

@@ -18,20 +18,37 @@
     <LibraryReferences>{2a32a80f-8179-4c28-bcfe-db29b33750cc}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PlcTask.TcTTO">
+    <Compile Include="GVL\FB_DoWork.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\FB_DoWorkProxy.TcPOU">
+    <Compile Include="GVL\GVL.TcGVL">
       <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="POUs\F_ConsumeTime.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\MAIN.TcPOU">
+    <Compile Include="POUs\PRG_Task1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_Task2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_Task3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task1.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task2.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Task3.TcTTO">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="GVL" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +68,10 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
       <SystemLibrary>true</SystemLibrary>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_RealtimeMonitoring">
+      <DefaultResolution>Tc3_RealtimeMonitoring, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_RealtimeMonitoring</Namespace>
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
