@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.22" ClassName="CDevEtherCATSlaveDef" SubType="130">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00000000003D}" TcBaseType="true" HideType="true">USINTARR6</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000002}">USINT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<Device Id="1" DevType="130" AmsNetId="192.168.1.102.2.255" RemoteName="EtherCAT Slave">
+		<Name>__FILENAME__</Name>
+		<AddressInfo>
+			<Ccat>
+				<Address>-801112064</Address>
+				<Offset>65536</Offset>
+				<Size>65536</Size>
+				<BaseAddr>0</BaseAddr>
+				<BusNo>3</BusNo>
+				<SlotNo>0</SlotNo>
+				<VendorId>5612</VendorId>
+				<DeviceId>20480</DeviceId>
+				<TimeSize>128</TimeSize>
+				<TimeOffs>1024</TimeOffs>
+				<GpioSize>32</GpioSize>
+				<GpioOffs>768</GpioOffs>
+			</Ccat>
+		</AddressInfo>
+		<Vars VarGrpType="1" InsertType="1">
+			<Name>Inputs</Name>
+		</Vars>
+		<Vars VarGrpType="2" InsertType="1">
+			<Name>Outputs</Name>
+			<Var>
+				<Name>Encoder Sim</Name>
+				<Type>UINT</Type>
+				<BitOffs>32</BitOffs>
+				<ExternalAddress>4</ExternalAddress>
+			</Var>
+		</Vars>
+		<Vars VarGrpType="3">
+			<Name>InfoData</Name>
+			<Var>
+				<Name>State</Name>
+				<Comment><![CDATA[0x___1 = Slave is in 'INIT' state
+0x___2 = Slave is in 'PREOP' state
+0x___4 = Slave is in 'SAFEOP' state
+0x___8 = Slave is in 'OP' state]]></Comment>
+				<Type>UINT</Type>
+				<InOut>0</InOut>
+			</Var>
+			<Var>
+				<Name>NetId</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000003D}">USINTARR6</Type>
+				<BitOffs>16</BitOffs>
+				<InOut>0</InOut>
+			</Var>
+			<Var>
+				<Name>DcToTcTimeOffset</Name>
+				<Comment><![CDATA[Offset between DC and TwinCAT time (in ns)]]></Comment>
+				<Type>LINT</Type>
+				<BitOffs>64</BitOffs>
+				<InOut>0</InOut>
+			</Var>
+			<Var>
+				<Name>DcTimeDiff</Name>
+				<Comment><![CDATA[Time difference(in ns)]]></Comment>
+				<Type>DINT</Type>
+				<BitOffs>128</BitOffs>
+				<InOut>0</InOut>
+			</Var>
+			<Var>
+				<Name>Dc State</Name>
+				<Comment><![CDATA[0x___1 = TwinCAT Time Controlled by EtherCAT Slave Dc time
+0x___2 = TwinCAT Time Controlled by CCat time]]></Comment>
+				<Type>UINT</Type>
+				<BitOffs>160</BitOffs>
+				<InOut>0</InOut>
+			</Var>
+		</Vars>
+		<Image Id="1" AddrType="1" ImageType="2">
+			<Name>Image</Name>
+		</Image>
+		<EtherCATSlave Flags="2" DcSyncMode="1" InfoDataDcTiming="1"/>
+	</Device>
+</TcSmItem>

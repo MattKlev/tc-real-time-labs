@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{cba2def1-e2df-437a-aa4b-e380efd05e6e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Counter	AT%Q*:UINT;
+	fbSinWave	:FB_CTRL_SIGNAL_GENERATOR;
+	Param: ST_CTRL_SIGNAL_GENERATOR_PARAMS := (tCtrlCycleTime := TIME#10ms, tTaskCycleTime := TIME#10ms, tCylceDuration := TIME#2s0ms, fAmplitude := 1000);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbSinWave( 
+	eMode:=E_CTRL_MODE.eCTRL_MODE_ACTIVE , 
+	stParams:=Param );
+	
+	
+Counter:=TO_UINT(fbSinWave.fOut);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

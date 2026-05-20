@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_PLC1" Id="{99e8ecb6-2e62-43ad-aace-946c2769ef26}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_PLC1
+VAR
+	EncoderValue AT %I* : UINT;
+	Pos					: LREAL;
+	ProcessingTime		:UDINT:=50;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_ConsumeTime(ProcessingTime);
+
+Pos:= UINT_TO_LREAL(EncoderValue)*100;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project AssemblyName="TwinCAT.Analytics.Workbench">
+  <ActiveColorSyncMode>OnlyTemplateCharts</ActiveColorSyncMode>
+  <ActiveTemplateAutoColorMode>OnlyMultipleTemplates</ActiveTemplateAutoColorMode>
+  <AnalysisLength>6000000000</AnalysisLength>
+  <Comment />
+  <DisplayColor>Black</DisplayColor>
+  <Guid>ba773d23-ddc1-4d83-aed0-74043c213bed</Guid>
+  <Name>MeasurementMemberBase</Name>
+  <ProjectPath>C:\Source\tc-real-time-labs\Examples\6 Process Image\Analytics Project</ProjectPath>
+  <RefScopeController>
+    <Comment />
+    <ConnectedWorkbenchMemberGuid>ba773d23-ddc1-4d83-aed0-74043c213bed</ConnectedWorkbenchMemberGuid>
+    <DisplayColor>Black</DisplayColor>
+    <Guid>1f052305-023f-4a8a-a6c6-76d9fa0b6daa</Guid>
+    <Name>MeasurementMemberBase</Name>
+    <RefreshRefScopeMode>Automatic</RefreshRefScopeMode>
+    <ScopeProjectGuid>c6696f34-694e-4a1b-8aa5-347c28f01568</ScopeProjectGuid>
+    <SortPriority>100</SortPriority>
+    <SubMember>
+      <NetworkController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+        <Comment />
+        <ConnectedWorkbenchMemberGuid>5ad7fa68-4f8e-419f-95db-7de37d92c378</ConnectedWorkbenchMemberGuid>
+        <DisplayColor>Black</DisplayColor>
+        <Guid>c01a47f5-0222-45ca-80a8-702ee92b346e</Guid>
+        <Name>MeasurementMemberBase</Name>
+        <SortPriority>100</SortPriority>
+        <SubMember>
+          <FunctionController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <Comment />
+            <ConnectedWorkbenchMemberGuid>196c734a-1f18-47bf-b93e-58295b17c8db</ConnectedWorkbenchMemberGuid>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>0391a79e-196d-49ba-b1d6-1a1263c75eca</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <DefaultOutVariableController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>0189ac04-457f-48f7-865d-c8ad061ea880</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>00000000-0000-0000-0000-000000000000</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>39362c8f-4fb2-4673-9ccb-42e1e9e085ad</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>00000000-0000-0000-0000-000000000000</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </DefaultOutVariableController>
+              <DefaultOutVariableController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>65171a0e-0145-4dc4-a03a-d6a3a322ca68</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>cff4c813-1e74-4ccb-a1d8-ac958372f365</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>a8168bc1-0052-4600-8e29-cc633c18b685</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>8e316bef-96fd-43bd-9ad2-09ef206e4542</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </DefaultOutVariableController>
+              <DefaultOutVariableController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>49e228fa-93e9-4804-b5a3-0a7ae14962b0</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>ba17ebb9-1781-4e60-82a3-3f1b177fcc09</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>ebd73a22-50ea-4d79-b4ac-6f581e001d50</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>bad2c69b-54e2-4d1d-bcd0-de08b086db61</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </DefaultOutVariableController>
+              <EventOutVarController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>8e07119d-bce6-4ef0-a283-7e8eff0d2fee</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>05ac689d-9854-4faf-bd10-f180127b9e04</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>d2b5f445-bf92-4529-ae7c-8601062669b9</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>b4066079-471e-4089-81b7-92cfd433cce9</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </EventOutVarController>
+              <ChannelHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <ChannelInfoTag />
+                <CleanWaiting>false</CleanWaiting>
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>ce73e6e4-a2e3-4486-abd2-c2eba015abe0</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <ScopeMemberGuid>77d44941-f398-459c-aef2-644985775e35</ScopeMemberGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember>
+                  <VarToInterpreterController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                    <AcquisitionInterpreterGuid>f728f5bc-3d6b-45c7-b68b-58549f1a3c4a</AcquisitionInterpreterGuid>
+                    <Comment />
+                    <ConnectedWorkbenchMemberGuid>5467a661-f1df-4959-b2e5-56b1099dc3b9</ConnectedWorkbenchMemberGuid>
+                    <DisplayColor>Black</DisplayColor>
+                    <Guid>80471bd3-23d2-4fc4-ae06-77d1761b1811</Guid>
+                    <Name>MeasurementMemberBase</Name>
+                    <SortPriority>100</SortPriority>
+                    <SubMember />
+                    <Title>MeasurementMemberBase</Title>
+                  </VarToInterpreterController>
+                </SubMember>
+                <Title>MeasurementMemberBase</Title>
+              </ChannelHandler>
+              <ChannelHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <ChannelInfoTag />
+                <CleanWaiting>false</CleanWaiting>
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>6ea6a6ac-8a3f-4dfd-bfdf-3bfa019b0308</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <ScopeMemberGuid>fb9ebacc-6139-40ad-bdde-89b1d419c35b</ScopeMemberGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember>
+                  <VarToInterpreterController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                    <AcquisitionInterpreterGuid>91f6b166-3d1b-4ac2-a2c4-cb167fb53d86</AcquisitionInterpreterGuid>
+                    <Comment />
+                    <ConnectedWorkbenchMemberGuid>94260f64-bc43-432c-ac71-91c54942c1d2</ConnectedWorkbenchMemberGuid>
+                    <DisplayColor>Black</DisplayColor>
+                    <Guid>03838dc6-9087-4f75-89c9-4d68c4f0486a</Guid>
+                    <Name>MeasurementMemberBase</Name>
+                    <SortPriority>100</SortPriority>
+                    <SubMember />
+                    <Title>MeasurementMemberBase</Title>
+                  </VarToInterpreterController>
+                </SubMember>
+                <Title>MeasurementMemberBase</Title>
+              </ChannelHandler>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </FunctionController>
+          <VisibleChartHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <CleanWaiting>false</CleanWaiting>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>e7b5da5b-46d6-4df8-8f03-1483febf682f</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <ScopeMemberGuid>2c32b365-a8d2-4623-8141-250ae6d0c0f8</ScopeMemberGuid>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <DataTypeRelatedAxisHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <CleanWaiting>false</CleanWaiting>
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>da5491ab-6318-4cd3-87ee-390180d60126</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <ScopeMemberGuid>596cd592-7655-4789-909a-2755f2d5f12f</ScopeMemberGuid>
+                <SortPriority>100</SortPriority>
+                <SpecificAxisName />
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+                <UsedDataType>UINT16</UsedDataType>
+              </DataTypeRelatedAxisHandler>
+              <RefGuid-ChannelHandler>ce73e6e4-a2e3-4486-abd2-c2eba015abe0</RefGuid-ChannelHandler>
+              <RefGuid-ChannelHandler>6ea6a6ac-8a3f-4dfd-bfdf-3bfa019b0308</RefGuid-ChannelHandler>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+            <UsedChartType>YT</UsedChartType>
+          </VisibleChartHandler>
+          <EventChartHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <CleanWaiting>false</CleanWaiting>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>34bd603b-d10b-4cbc-837a-f77b142f3f23</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <ScopeMemberGuid>4d0dc45c-51be-4c98-84db-ffe4f88c4978</ScopeMemberGuid>
+            <SortPriority>100</SortPriority>
+            <SubMember />
+            <Title>MeasurementMemberBase</Title>
+          </EventChartHandler>
+        </SubMember>
+        <Title>MeasurementMemberBase</Title>
+      </NetworkController>
+      <MappingInputSourceController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+        <Comment />
+        <ConnectedWorkbenchMemberGuid>5a00adb2-0e1c-4fb2-ba8d-6bdda7230737</ConnectedWorkbenchMemberGuid>
+        <DisplayColor>Black</DisplayColor>
+        <Guid>25b35420-cacf-4d9f-b0cf-044048307e86</Guid>
+        <Name>MeasurementMemberBase</Name>
+        <SortPriority>100</SortPriority>
+        <SubMember>
+          <AlyInputController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <Comment />
+            <ConnectedWorkbenchMemberGuid>039656f3-9f20-4e23-b8e1-7900678f9b4d</ConnectedWorkbenchMemberGuid>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>ef8d8ad1-ccd4-45dc-82ff-42900c32d5e2</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <AlyInputAcquisitionController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <ActiveOversamplingMode>None</ActiveOversamplingMode>
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>039656f3-9f20-4e23-b8e1-7900678f9b4d</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>63961b10-ee09-4098-aa1f-29ca7cdbb4e7</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>8d7af2ab-a71e-4abb-ab29-767a6a89b33c</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>4fcb74de-8287-4e8b-a357-8dec9d3728f5</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </AlyInputAcquisitionController>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </AlyInputController>
+          <AlyInputController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <Comment />
+            <ConnectedWorkbenchMemberGuid>e040cfdb-4314-48ac-b7e0-ee70d0a1a8a6</ConnectedWorkbenchMemberGuid>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>e2c2d3aa-1fe9-4ac8-99a0-ffcd0c791af6</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <AlyInputAcquisitionController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <ActiveOversamplingMode>None</ActiveOversamplingMode>
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>e040cfdb-4314-48ac-b7e0-ee70d0a1a8a6</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>40f14f67-9b8f-4b2f-b374-5e7463cfac14</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>5467a661-f1df-4959-b2e5-56b1099dc3b9</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>b0385fcc-7538-4e2a-a902-00dd3837e824</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </AlyInputAcquisitionController>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </AlyInputController>
+          <EventChartHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <CleanWaiting>false</CleanWaiting>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>a5378525-f573-47f6-9e77-a633b16e2fb9</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <ScopeMemberGuid>38248225-5298-4aff-8e65-328023c5a89d</ScopeMemberGuid>
+            <SortPriority>100</SortPriority>
+            <SubMember />
+            <Title>MeasurementMemberBase</Title>
+          </EventChartHandler>
+        </SubMember>
+        <Title>MeasurementMemberBase</Title>
+      </MappingInputSourceController>
+      <MappingInputSourceController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+        <Comment />
+        <ConnectedWorkbenchMemberGuid>9e131c38-842d-4f4a-9b7e-8b89d591cd79</ConnectedWorkbenchMemberGuid>
+        <DisplayColor>Black</DisplayColor>
+        <Guid>e66125ae-046a-4561-800f-6a075f3293fb</Guid>
+        <Name>MeasurementMemberBase</Name>
+        <SortPriority>100</SortPriority>
+        <SubMember>
+          <AlyInputController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <Comment />
+            <ConnectedWorkbenchMemberGuid>8e6b6544-efc7-412b-b964-06a67567069a</ConnectedWorkbenchMemberGuid>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>7ffcc15d-369e-4dd4-8a6b-0aa2768009aa</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <AlyInputAcquisitionController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <ActiveOversamplingMode>None</ActiveOversamplingMode>
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>8e6b6544-efc7-412b-b964-06a67567069a</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>9341fab9-85cb-41af-af2a-7752bc1b8a58</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>d5a602de-5943-49b9-9e01-c89e0fc312fd</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>3b0ff2c2-c4e3-44c4-bf41-81c9b2e29f2d</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </AlyInputAcquisitionController>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </AlyInputController>
+          <AlyInputController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <Comment />
+            <ConnectedWorkbenchMemberGuid>00df223e-c935-4dfe-8676-328a6afbc54a</ConnectedWorkbenchMemberGuid>
+            <DisplayColor>Black</DisplayColor>
+            <Guid>d5aacb34-bc30-40f8-b5a9-ab8f82845c80</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <AlyInputAcquisitionController AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+                <ActiveOversamplingMode>None</ActiveOversamplingMode>
+                <Comment />
+                <ConnectedWorkbenchMemberGuid>00df223e-c935-4dfe-8676-328a6afbc54a</ConnectedWorkbenchMemberGuid>
+                <DataProviderMemberGuid>593d953c-3ee4-4eb0-950f-9eb7a0fa2887</DataProviderMemberGuid>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>94260f64-bc43-432c-ac71-91c54942c1d2</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <RelatedAcquisitionGuid>6aad9e9e-6047-48b4-9acf-6da778466e30</RelatedAcquisitionGuid>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>MeasurementMemberBase</Title>
+              </AlyInputAcquisitionController>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </AlyInputController>
+          <EventChartHandler AssemblyName="TwinCAT.Analytics.Workbench.ScopeConnection">
+            <CleanWaiting>false</CleanWaiting>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>bc198a84-dcd6-4afa-b2dc-cd915b72a8fa</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <ScopeMemberGuid>1129734c-42ac-484a-98a0-a37030cf6ebb</ScopeMemberGuid>
+            <SortPriority>100</SortPriority>
+            <SubMember />
+            <Title>MeasurementMemberBase</Title>
+          </EventChartHandler>
+        </SubMember>
+        <Title>MeasurementMemberBase</Title>
+      </MappingInputSourceController>
+    </SubMember>
+    <Title>MeasurementMemberBase</Title>
+  </RefScopeController>
+  <Ringbuffer>true</Ringbuffer>
+  <SortPriority>100</SortPriority>
+  <SourceControl>
+    <Comment />
+    <DisplayColor>Black</DisplayColor>
+    <Guid>f3c47799-14b4-4910-bb06-22cb3fb75b20</Guid>
+    <Name>MeasurementMemberBase</Name>
+    <SortPriority>100</SortPriority>
+    <SubMember>
+      <InputSource_Ads AssemblyName="TwinCAT.Analytics.Workbench">
+        <AmsNetId>192.168.1.102.1.1</AmsNetId>
+        <Comment />
+        <ContextMask>0</ContextMask>
+        <Customer />
+        <CycleTime>10000000</CycleTime>
+        <Description />
+        <DisplayColor>Black</DisplayColor>
+        <Guid>da076133-e1b0-44ef-9d49-1bc436bc67ed</Guid>
+        <HasCustomTitle>false</HasCustomTitle>
+        <Name>192.168.1.102.1.1:851 [10.00ms]</Name>
+        <Polling>false</Polling>
+        <Port>851</Port>
+        <Position />
+        <Records>
+          <Records />
+        </Records>
+        <SortPriority>100</SortPriority>
+        <SubMember>
+          <Input_Timeline AssemblyName="TwinCAT.Analytics.Workbench">
+            <Area>None</Area>
+            <BaseTypeName>ULINT</BaseTypeName>
+            <ByteSize>8</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>4f509003-f9df-4c65-ab24-9bba2e421a26</Guid>
+            <Name>Timeline</Name>
+            <SortPriority>100</SortPriority>
+            <SymbolName>Timeline</SymbolName>
+            <Title>Timeline</Title>
+            <TypeInfos />
+            <TypeName>LTIME</TypeName>
+          </Input_Timeline>
+          <Input_Ads AssemblyName="TwinCAT.Analytics.Workbench">
+            <Area>None</Area>
+            <BaseTypeName>UINT</BaseTypeName>
+            <ByteSize>2</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>24bf039f-1a31-4f4e-b405-756c3a3925fc</Guid>
+            <IndexGroup>61472</IndexGroup>
+            <IndexOffset>387124</IndexOffset>
+            <Name>PRG_PLC1.EncoderValue</Name>
+            <SortPriority>100</SortPriority>
+            <SymbolBased>false</SymbolBased>
+            <SymbolName>PRG_PLC1.EncoderValue</SymbolName>
+            <Title>PRG_PLC1.EncoderValue</Title>
+            <TypeInfos>
+              <DataTypes>
+                <DataType>
+                  <Name>UINT</Name>
+                  <BitSize>16</BitSize>
+                  <BaseType GUID="FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF" />
+                </DataType>
+              </DataTypes>
+            </TypeInfos>
+            <TypeName>UINT</TypeName>
+            <UTF8Encoding>false</UTF8Encoding>
+          </Input_Ads>
+        </SubMember>
+        <SystemAlias />
+        <Title>MeasurementMemberBase</Title>
+      </InputSource_Ads>
+      <MappingInputSource AssemblyName="TwinCAT.Analytics.Workbench">
+        <Comment />
+        <CurrentMappingReference>64da6ecd-6f12-4cc9-8f72-f2914e39d7a5</CurrentMappingReference>
+        <DisplayColor>Black</DisplayColor>
+        <Guid>5a00adb2-0e1c-4fb2-ba8d-6bdda7230737</Guid>
+        <IncludeInReferencedScope>true</IncludeInReferencedScope>
+        <Name>192.168.1.102.1.1:851 [10.00ms]</Name>
+        <SortPriority>128</SortPriority>
+        <SourceReference>da076133-e1b0-44ef-9d49-1bc436bc67ed</SourceReference>
+        <SubMember>
+          <MappingConfig AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>64da6ecd-6f12-4cc9-8f72-f2914e39d7a5</Guid>
+            <InputSourceReference>da076133-e1b0-44ef-9d49-1bc436bc67ed</InputSourceReference>
+            <Name>Default</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <MappingInputLink AssemblyName="TwinCAT.Analytics.Workbench">
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>79c26a7c-a982-4ba8-bcff-2dc87b3b2981</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <SinkReference>c27e9bde-4946-468b-84ad-328db09e0def</SinkReference>
+                <SortPriority>100</SortPriority>
+                <SourceReference>4f509003-f9df-4c65-ab24-9bba2e421a26</SourceReference>
+                <Title>MeasurementMemberBase</Title>
+              </MappingInputLink>
+              <MappingInputLink AssemblyName="TwinCAT.Analytics.Workbench">
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>3441b047-e64c-4669-9c62-89d83b0b8de7</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <SinkReference>dcf74efb-2b2f-4d2f-9ab5-56a87bc98e15</SinkReference>
+                <SortPriority>100</SortPriority>
+                <SourceReference>24bf039f-1a31-4f4e-b405-756c3a3925fc</SourceReference>
+                <Title>MeasurementMemberBase</Title>
+              </MappingInputLink>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </MappingConfig>
+          <MappingInput_Timeline AssemblyName="TwinCAT.Analytics.Workbench">
+            <ArrayLength>0</ArrayLength>
+            <AutoRename>None</AutoRename>
+            <BaseTypeName>ULINT</BaseTypeName>
+            <ByteSize>8</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>c27e9bde-4946-468b-84ad-328db09e0def</Guid>
+            <IncludeInReferencedScope>true</IncludeInReferencedScope>
+            <IsArray>false</IsArray>
+            <Name>Timeline</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <AnalysisInput_Timeline AssemblyName="TwinCAT.Analytics.Workbench">
+                <ArrayLength>0</ArrayLength>
+                <BaseTypeName>ULINT</BaseTypeName>
+                <ByteSize>8</ByteSize>
+                <Comment />
+                <ContextReference>e3251608-d9ed-4df0-9b60-adbf43e412ca</ContextReference>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>039656f3-9f20-4e23-b8e1-7900678f9b4d</Guid>
+                <IncludeInReferencedScope>false</IncludeInReferencedScope>
+                <IsArray>false</IsArray>
+                <Name>Timeline</Name>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>Timeline</Title>
+                <TypeName>LTIME</TypeName>
+              </AnalysisInput_Timeline>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+            <TypeName>LTIME</TypeName>
+          </MappingInput_Timeline>
+          <MappingInput AssemblyName="TwinCAT.Analytics.Workbench">
+            <ArrayLength>0</ArrayLength>
+            <AutoRename>None</AutoRename>
+            <BaseTypeName>UINT</BaseTypeName>
+            <ByteSize>2</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>dcf74efb-2b2f-4d2f-9ab5-56a87bc98e15</Guid>
+            <IncludeInReferencedScope>true</IncludeInReferencedScope>
+            <IsArray>false</IsArray>
+            <Name>PLC 1 EncoderValue</Name>
+            <SortPriority>101</SortPriority>
+            <SubMember>
+              <AnalysisInput AssemblyName="TwinCAT.Analytics.Workbench">
+                <ArrayLength>0</ArrayLength>
+                <BaseTypeName>UINT</BaseTypeName>
+                <ByteSize>2</ByteSize>
+                <Comment />
+                <ContextReference>e3251608-d9ed-4df0-9b60-adbf43e412ca</ContextReference>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>e040cfdb-4314-48ac-b7e0-ee70d0a1a8a6</Guid>
+                <IncludeInReferencedScope>false</IncludeInReferencedScope>
+                <IsArray>false</IsArray>
+                <Name>PLC 1 EncoderValue</Name>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>PLC 1 EncoderValue</Title>
+                <TypeName>UINT</TypeName>
+              </AnalysisInput>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+            <TypeName>UINT</TypeName>
+          </MappingInput>
+          <SourceContext AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>e3251608-d9ed-4df0-9b60-adbf43e412ca</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SamplingRate>
+              <Type>Normalsampling</Type>
+              <Factor>1</Factor>
+            </SamplingRate>
+            <SortPriority>50</SortPriority>
+            <SourceName>192.168.1.102.1.1:851 [10.00ms]</SourceName>
+            <Title>10.00ms [1:1] - 192.168.1.102.1.1:851 [10.00ms]</Title>
+          </SourceContext>
+        </SubMember>
+        <Title>MeasurementMemberBase</Title>
+      </MappingInputSource>
+      <InputSource_Ads AssemblyName="TwinCAT.Analytics.Workbench">
+        <AmsNetId>192.168.1.102.1.1</AmsNetId>
+        <Comment />
+        <ContextMask>0</ContextMask>
+        <Customer />
+        <CycleTime>10000000</CycleTime>
+        <Description />
+        <DisplayColor>Black</DisplayColor>
+        <Guid>4e52c687-ab83-4827-9520-f7102f3de747</Guid>
+        <HasCustomTitle>false</HasCustomTitle>
+        <Name>192.168.1.102.1.1:852 [10.00ms]</Name>
+        <Polling>false</Polling>
+        <Port>852</Port>
+        <Position />
+        <Records>
+          <Records />
+        </Records>
+        <SortPriority>100</SortPriority>
+        <SubMember>
+          <Input_Timeline AssemblyName="TwinCAT.Analytics.Workbench">
+            <Area>None</Area>
+            <BaseTypeName>ULINT</BaseTypeName>
+            <ByteSize>8</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>a7e9f7f9-dcf5-4eb9-9246-a1306be4ec60</Guid>
+            <Name>Timeline</Name>
+            <SortPriority>100</SortPriority>
+            <SymbolName>Timeline</SymbolName>
+            <Title>Timeline</Title>
+            <TypeInfos />
+            <TypeName>LTIME</TypeName>
+          </Input_Timeline>
+          <Input_Ads AssemblyName="TwinCAT.Analytics.Workbench">
+            <Area>None</Area>
+            <BaseTypeName>LREAL</BaseTypeName>
+            <ByteSize>8</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>0d3369ac-9808-4779-b7dd-43a39b26144d</Guid>
+            <IndexGroup>16448</IndexGroup>
+            <IndexOffset>387984</IndexOffset>
+            <Name>PRG_PLC2.Pos</Name>
+            <SortPriority>100</SortPriority>
+            <SymbolBased>false</SymbolBased>
+            <SymbolName>PRG_PLC2.Pos</SymbolName>
+            <Title>PRG_PLC2.Pos</Title>
+            <TypeInfos>
+              <DataTypes>
+                <DataType>
+                  <Name>LREAL</Name>
+                  <BitSize>64</BitSize>
+                  <BaseType GUID="FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF" />
+                </DataType>
+              </DataTypes>
+            </TypeInfos>
+            <TypeName>LREAL</TypeName>
+            <UTF8Encoding>false</UTF8Encoding>
+          </Input_Ads>
+          <Input_Ads AssemblyName="TwinCAT.Analytics.Workbench">
+            <Area>None</Area>
+            <BaseTypeName>UINT</BaseTypeName>
+            <ByteSize>2</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>60bf7847-794b-473c-98cb-04de36981a7b</Guid>
+            <IndexGroup>61472</IndexGroup>
+            <IndexOffset>387124</IndexOffset>
+            <Name>PRG_PLC2.EncoderValue</Name>
+            <SortPriority>100</SortPriority>
+            <SymbolBased>false</SymbolBased>
+            <SymbolName>PRG_PLC2.EncoderValue</SymbolName>
+            <Title>PRG_PLC2.EncoderValue</Title>
+            <TypeInfos>
+              <DataTypes>
+                <DataType>
+                  <Name>UINT</Name>
+                  <BitSize>16</BitSize>
+                  <BaseType GUID="FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF" />
+                </DataType>
+              </DataTypes>
+            </TypeInfos>
+            <TypeName>UINT</TypeName>
+            <UTF8Encoding>false</UTF8Encoding>
+          </Input_Ads>
+        </SubMember>
+        <SystemAlias />
+        <Title>MeasurementMemberBase</Title>
+      </InputSource_Ads>
+      <MappingInputSource AssemblyName="TwinCAT.Analytics.Workbench">
+        <Comment />
+        <CurrentMappingReference>1ef0c988-269b-4726-bbe2-2fc7292a4f10</CurrentMappingReference>
+        <DisplayColor>Black</DisplayColor>
+        <Guid>9e131c38-842d-4f4a-9b7e-8b89d591cd79</Guid>
+        <IncludeInReferencedScope>true</IncludeInReferencedScope>
+        <Name>192.168.1.102.1.1:852 [10.00ms]</Name>
+        <SortPriority>256</SortPriority>
+        <SourceReference>4e52c687-ab83-4827-9520-f7102f3de747</SourceReference>
+        <SubMember>
+          <MappingConfig AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>1ef0c988-269b-4726-bbe2-2fc7292a4f10</Guid>
+            <InputSourceReference>4e52c687-ab83-4827-9520-f7102f3de747</InputSourceReference>
+            <Name>Default</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <MappingInputLink AssemblyName="TwinCAT.Analytics.Workbench">
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>ef23b672-cdb0-4601-8660-ec8c4a1f996e</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <SinkReference>ce9e4c26-19de-4720-94dc-fe556921d2a1</SinkReference>
+                <SortPriority>100</SortPriority>
+                <SourceReference>a7e9f7f9-dcf5-4eb9-9246-a1306be4ec60</SourceReference>
+                <Title>MeasurementMemberBase</Title>
+              </MappingInputLink>
+              <MappingInputLink AssemblyName="TwinCAT.Analytics.Workbench">
+                <Comment />
+                <DisplayColor>Black</DisplayColor>
+                <Guid>f2bec970-62e8-4e6d-8661-91f4582fdda7</Guid>
+                <Name>MeasurementMemberBase</Name>
+                <SinkReference>ad3e270a-0295-461d-85bc-dacdc0bcf845</SinkReference>
+                <SortPriority>100</SortPriority>
+                <SourceReference>60bf7847-794b-473c-98cb-04de36981a7b</SourceReference>
+                <Title>MeasurementMemberBase</Title>
+              </MappingInputLink>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+          </MappingConfig>
+          <MappingInput_Timeline AssemblyName="TwinCAT.Analytics.Workbench">
+            <ArrayLength>0</ArrayLength>
+            <AutoRename>None</AutoRename>
+            <BaseTypeName>ULINT</BaseTypeName>
+            <ByteSize>8</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>ce9e4c26-19de-4720-94dc-fe556921d2a1</Guid>
+            <IncludeInReferencedScope>true</IncludeInReferencedScope>
+            <IsArray>false</IsArray>
+            <Name>Timeline</Name>
+            <SortPriority>100</SortPriority>
+            <SubMember>
+              <AnalysisInput_Timeline AssemblyName="TwinCAT.Analytics.Workbench">
+                <ArrayLength>0</ArrayLength>
+                <BaseTypeName>ULINT</BaseTypeName>
+                <ByteSize>8</ByteSize>
+                <Comment />
+                <ContextReference>d103fb11-54dc-4af9-9ac2-76b354693b48</ContextReference>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>8e6b6544-efc7-412b-b964-06a67567069a</Guid>
+                <IncludeInReferencedScope>false</IncludeInReferencedScope>
+                <IsArray>false</IsArray>
+                <Name>Timeline</Name>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>Timeline</Title>
+                <TypeName>LTIME</TypeName>
+              </AnalysisInput_Timeline>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+            <TypeName>LTIME</TypeName>
+          </MappingInput_Timeline>
+          <MappingInput AssemblyName="TwinCAT.Analytics.Workbench">
+            <ArrayLength>0</ArrayLength>
+            <AutoRename>None</AutoRename>
+            <BaseTypeName>UINT</BaseTypeName>
+            <ByteSize>2</ByteSize>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>ad3e270a-0295-461d-85bc-dacdc0bcf845</Guid>
+            <IncludeInReferencedScope>true</IncludeInReferencedScope>
+            <IsArray>false</IsArray>
+            <Name>PLC 2 EncoderValue</Name>
+            <SortPriority>101</SortPriority>
+            <SubMember>
+              <AnalysisInput AssemblyName="TwinCAT.Analytics.Workbench">
+                <ArrayLength>0</ArrayLength>
+                <BaseTypeName>UINT</BaseTypeName>
+                <ByteSize>2</ByteSize>
+                <Comment />
+                <ContextReference>d103fb11-54dc-4af9-9ac2-76b354693b48</ContextReference>
+                <DisplayColor>Black</DisplayColor>
+                <Guid>00df223e-c935-4dfe-8676-328a6afbc54a</Guid>
+                <IncludeInReferencedScope>false</IncludeInReferencedScope>
+                <IsArray>false</IsArray>
+                <Name>PLC 2 EncoderValue</Name>
+                <SortPriority>100</SortPriority>
+                <SubMember />
+                <Title>PLC 2 EncoderValue</Title>
+                <TypeName>UINT</TypeName>
+              </AnalysisInput>
+            </SubMember>
+            <Title>MeasurementMemberBase</Title>
+            <TypeName>UINT</TypeName>
+          </MappingInput>
+          <SourceContext AssemblyName="TwinCAT.Analytics.Workbench">
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Guid>d103fb11-54dc-4af9-9ac2-76b354693b48</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <SamplingRate>
+              <Type>Normalsampling</Type>
+              <Factor>1</Factor>
+            </SamplingRate>
+            <SortPriority>50</SortPriority>
+            <SourceName>192.168.1.102.1.1:852 [10.00ms]</SourceName>
+            <Title>10.00ms [1:1] - 192.168.1.102.1.1:852 [10.00ms]</Title>
+          </SourceContext>
+        </SubMember>
+        <Title>MeasurementMemberBase</Title>
+      </MappingInputSource>
+    </SubMember>
+    <Title>MeasurementMemberBase</Title>
+  </SourceControl>
+  <SubMember>
+    <Network AssemblyName="TwinCAT.Analytics.Workbench">
+      <ActiveScopeConfiguration>00000000-0000-0000-0000-000000000000</ActiveScopeConfiguration>
+      <Closed>false</Closed>
+      <ClosedTemplateGuid>00000000-0000-0000-0000-000000000000</ClosedTemplateGuid>
+      <ClosedTemplateName />
+      <Comment />
+      <Description />
+      <DisplayColor>Black</DisplayColor>
+      <Guid>5ad7fa68-4f8e-419f-95db-7de37d92c378</Guid>
+      <ID>1</ID>
+      <Image16pxDataString />
+      <ImageDataString />
+      <IncludeInReferencedScope>true</IncludeInReferencedScope>
+      <IncludeInReport>false</IncludeInReport>
+      <IncludeSubMemberInReport>true</IncludeSubMemberInReport>
+      <IO_Linking>false</IO_Linking>
+      <Name>Network</Name>
+      <PersistentResults>false</PersistentResults>
+      <RptDataKey>0 - Network</RptDataKey>
+      <RptIncludeOptionalVariables>false</RptIncludeOptionalVariables>
+      <SelectedReportingCtrlName>Reporting Table Default</SelectedReportingCtrlName>
+      <SelectedScopeConfiguration>00000000-0000-0000-0000-000000000000</SelectedScopeConfiguration>
+      <SelectedTimeContextGuid>00000000-0000-0000-0000-000000000000</SelectedTimeContextGuid>
+      <SelfEnabled>true</SelfEnabled>
+      <ShowOptional>false</ShowOptional>
+      <SortPriority>100</SortPriority>
+      <StreamResults>false</StreamResults>
+      <SubMember>
+        <HMICtrlInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+          <AlyElementGuid>5ad7fa68-4f8e-419f-95db-7de37d92c378</AlyElementGuid>
+          <Clsid>00000000-0000-0000-0000-000000000000</Clsid>
+          <Comment />
+          <DisplayColor>Black</DisplayColor>
+          <DisplayText>Network</DisplayText>
+          <DockOnDesktop>false</DockOnDesktop>
+          <GenerateGVL>false</GenerateGVL>
+          <GlobalVariableType>InOutVariables</GlobalVariableType>
+          <Guid>05b8f3ba-da82-41a1-b93d-938f01f722ec</Guid>
+          <Name>MeasurementMemberBase</Name>
+          <SelectedMapping>
+            <CtrlAlgMapGuid>00000000-0000-0000-0000-000000000000</CtrlAlgMapGuid>
+            <AlgorithmGuid>00000000-0000-0000-0000-000000000000</AlgorithmGuid>
+          </SelectedMapping>
+          <SortPriority>100</SortPriority>
+          <Title>MeasurementMemberBase</Title>
+        </HMICtrlInfo>
+        <Function AssemblyName="TwinCAT.Analytics.Workbench">
+          <ActiveScopeConfiguration>00000000-0000-0000-0000-000000000000</ActiveScopeConfiguration>
+          <ClassId>02040302-0000-0000-f000-000000000064</ClassId>
+          <Comment />
+          <DisplayColor>Black</DisplayColor>
+          <Guid>196c734a-1f18-47bf-b93e-58295b17c8db</Guid>
+          <IncludeInReferencedScope>true</IncludeInReferencedScope>
+          <IncludeInReport>true</IncludeInReport>
+          <InitData>gAEAABQAAAAAAAAAAAAAAAEABAIBAAAAAQAAAAAAAACwIAADBAAAAAAAAAAAAAAAAgAEAgEAAAAAAAAAAAAAABAABAICAAAAAwAAAAAAAAABAQQCAgAAAAgAAAAAAAAAAgEEAgIAAAAIAAAAAAAAABEBBAICAAAABgAAAAAAAABmAQQCAgAAAAEAAAAAAAAAMwEEAgEAAAAAAAAAAAAAAAcABAIIAAAAAAAAAAAAAAAAAAAABQEEAgEAAAAAAAAAAAAAAAYBBAIBAAAAAAAAAAAAAAASAAQCAQAAAAAAAAAAAAAAEwAEAgEAAAAAAAAAAAAAAAEQBAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAQCEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAEAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEQBAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASEAQCEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYCAAAwQAAAAAAAAA</InitData>
+          <IO_Linking>false</IO_Linking>
+          <Name>Numerical Compare 2Ch</Name>
+          <PersistentResults>false</PersistentResults>
+          <RptDataKey>0 - Numerical Compare 2Ch</RptDataKey>
+          <SelectedScopeConfiguration>00000000-0000-0000-0000-000000000000</SelectedScopeConfiguration>
+          <SelfEnabled>true</SelfEnabled>
+          <ShowOptional>false</ShowOptional>
+          <SortPriority>100</SortPriority>
+          <StreamResults>false</StreamResults>
+          <SubMember>
+            <HMICtrlInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+              <AlyElementGuid>196c734a-1f18-47bf-b93e-58295b17c8db</AlyElementGuid>
+              <Clsid>02040302-0000-0000-f000-000000000064</Clsid>
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DisplayText>Numerical Compare 2Ch</DisplayText>
+              <DockOnDesktop>false</DockOnDesktop>
+              <GenerateGVL>false</GenerateGVL>
+              <GlobalVariableType>InOutVariables</GlobalVariableType>
+              <Guid>5d48b2ee-e9c8-4ae1-836b-71930959715f</Guid>
+              <Name>MeasurementMemberBase</Name>
+              <SelectedMapping>
+                <CtrlAlgMapGuid>00000000-0000-0000-0000-000000000000</CtrlAlgMapGuid>
+                <AlgorithmGuid>00000000-0000-0000-0000-000000000000</AlgorithmGuid>
+              </SelectedMapping>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </HMICtrlInfo>
+            <InVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>d51bf35e-1ee4-494a-aceb-cb78f04a2a80</Guid>
+              <IncludeInReferencedScope>true</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33820673</PId>
+              <SortPriority>100</SortPriority>
+              <SourceId>e040cfdb-4314-48ac-b7e0-ee70d0a1a8a6</SourceId>
+              <SourceIndex></SourceIndex>
+              <Title>MeasurementMemberBase</Title>
+            </InVariableData>
+            <InVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>8f2da0a5-bec6-4e63-9ea2-a3dd52af60b3</Guid>
+              <IncludeInReferencedScope>true</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33820674</PId>
+              <SortPriority>100</SortPriority>
+              <SourceId>00df223e-c935-4dfe-8676-328a6afbc54a</SourceId>
+              <SourceIndex></SourceIndex>
+              <Title>MeasurementMemberBase</Title>
+            </InVariableData>
+            <InVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>94f5408e-9e6c-4255-957b-dbd6b94e919d</Guid>
+              <IncludeInReferencedScope>true</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33820689</PId>
+              <SortPriority>100</SortPriority>
+              <SourceId>00000000-0000-0000-0000-000000000000</SourceId>
+              <SourceIndex></SourceIndex>
+              <Title>MeasurementMemberBase</Title>
+            </InVariableData>
+            <InVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>87c94d36-c4bd-4487-8217-2e87daefd6e9</Guid>
+              <IncludeInReferencedScope>true</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33820690</PId>
+              <SortPriority>100</SortPriority>
+              <SourceId>00000000-0000-0000-0000-000000000000</SourceId>
+              <SourceIndex></SourceIndex>
+              <Title>MeasurementMemberBase</Title>
+            </InVariableData>
+            <OutVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <Guid>0189ac04-457f-48f7-865d-c8ad061ea880</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <IsPersistent>false</IsPersistent>
+              <Name>MeasurementMemberBase</Name>
+              <PId>2147483648</PId>
+              <ShowInTimeline>false</ShowInTimeline>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </OutVariableData>
+            <OutVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <Guid>65171a0e-0145-4dc4-a03a-d6a3a322ca68</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <IsPersistent>true</IsPersistent>
+              <Name>MeasurementMemberBase</Name>
+              <PId>2147483649</PId>
+              <ShowInTimeline>false</ShowInTimeline>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </OutVariableData>
+            <OutVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <Guid>49e228fa-93e9-4804-b5a3-0a7ae14962b0</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <IsPersistent>true</IsPersistent>
+              <Name>MeasurementMemberBase</Name>
+              <PId>2147483656</PId>
+              <ShowInTimeline>false</ShowInTimeline>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </OutVariableData>
+            <OutVariableData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <Guid>8e07119d-bce6-4ef0-a283-7e8eff0d2fee</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <IsPersistent>true</IsPersistent>
+              <Name>MeasurementMemberBase</Name>
+              <PId>2147483664</PId>
+              <ShowInTimeline>true</ShowInTimeline>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </OutVariableData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>c53daf26-183e-4d4e-8d69-54b7779c3c55</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816578</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>4e614cb7-7515-4171-99d0-5ad39c701491</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816849</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>adca4d5c-01f8-4860-8eff-25663fd70d1f</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816934</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>9db1e0e2-a0c2-4824-b09a-f333e35b25d5</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816883</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>015a5c8f-9070-4cb9-9d15-d44c9b736728</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816583</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>29da7049-577c-438f-b549-5fb7fc134737</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816837</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>f43983c6-823c-48b6-b488-207405561083</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816838</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>8c1a39ae-6ae4-41e5-932a-e192049759fd</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816594</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <ParameterData AssemblyName="TwinCAT.Analytics.Workbench">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <DynamicIdx></DynamicIdx>
+              <Guid>550ae108-db79-40bc-b4e0-f28b57604bc2</Guid>
+              <IncludeInReferencedScope>false</IncludeInReferencedScope>
+              <Name>MeasurementMemberBase</Name>
+              <PId>33816595</PId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </ParameterData>
+            <RptVisuInfo AssemblyName="TwinCAT.Analytics.CodeGenerator.HMI">
+              <Comment />
+              <DisplayColor>Black</DisplayColor>
+              <Guid>5ec95c0c-622e-48c4-bb63-17a92f269b0f</Guid>
+              <Name>MeasurementMemberBase</Name>
+              <SelectedReportMappingId>
+                <CtrlAlgMapGuid>00001000-0000-0000-0000-000000000000</CtrlAlgMapGuid>
+                <AlgorithmGuid>00000029-0000-0000-0000-000000000000</AlgorithmGuid>
+              </SelectedReportMappingId>
+              <SortPriority>100</SortPriority>
+              <Title>MeasurementMemberBase</Title>
+            </RptVisuInfo>
+          </SubMember>
+          <Title>MeasurementMemberBase</Title>
+          <TriggerResults>false</TriggerResults>
+        </Function>
+      </SubMember>
+      <Title>MeasurementMemberBase</Title>
+      <TriggerResults>false</TriggerResults>
+    </Network>
+    <HMIDashboard AssemblyName="TwinCAT.Analytics.Workbench.HMI">
+      <Comment />
+      <DisplayColor>Black</DisplayColor>
+      <Guid>04da429a-827d-4ddf-b230-752c67e57902</Guid>
+      <Name>MeasurementMemberBase</Name>
+      <ParentEnabled>true</ParentEnabled>
+      <SelfEnabled>true</SelfEnabled>
+      <SortPriority>2147483647</SortPriority>
+      <SubMember>
+        <HMIContentMap AssemblyName="TwinCAT.Analytics.Workbench.HMI">
+          <Comment />
+          <DisplayColor>Black</DisplayColor>
+          <Guid>f1827003-0227-48f1-9184-14e6feb8eaa0</Guid>
+          <HMIPermissions>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Editors>
+              <HMIUserGroup>
+                <DefaultPermission>Editor</DefaultPermission>
+                <IsDefault>false</IsDefault>
+                <Name>Administrators</Name>
+                <RelatedGroups>
+                  <HMIUserGroup>
+                    <DefaultPermission>Editor</DefaultPermission>
+                    <IsDefault>true</IsDefault>
+                    <Name>__SystemAdministrators</Name>
+                    <RelatedGroups />
+                  </HMIUserGroup>
+                </RelatedGroups>
+              </HMIUserGroup>
+              <HMIUserGroup>
+                <DefaultPermission>Editor</DefaultPermission>
+                <IsDefault>false</IsDefault>
+                <Name>Users</Name>
+                <RelatedGroups>
+                  <HMIUserGroup>
+                    <DefaultPermission>Editor</DefaultPermission>
+                    <IsDefault>true</IsDefault>
+                    <Name>__SystemUsers</Name>
+                    <RelatedGroups />
+                  </HMIUserGroup>
+                </RelatedGroups>
+              </HMIUserGroup>
+            </Editors>
+            <Guid>3146304f-d623-460a-8a20-4a1a264163e6</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <NoAccess />
+            <SortPriority>100</SortPriority>
+            <Title>MeasurementMemberBase</Title>
+            <Viewers>
+              <HMIUserGroup>
+                <DefaultPermission>Viewer</DefaultPermission>
+                <IsDefault>false</IsDefault>
+                <Name>Guests</Name>
+                <RelatedGroups>
+                  <HMIUserGroup>
+                    <DefaultPermission>Viewer</DefaultPermission>
+                    <IsDefault>true</IsDefault>
+                    <Name>__SystemGuests</Name>
+                    <RelatedGroups />
+                  </HMIUserGroup>
+                </RelatedGroups>
+              </HMIUserGroup>
+            </Viewers>
+          </HMIPermissions>
+          <ID>1</ID>
+          <Name>MeasurementMemberBase</Name>
+          <NetworkID>1</NetworkID>
+          <ParentEnabled>true</ParentEnabled>
+          <SelfEnabled>true</SelfEnabled>
+          <SortPriority>100</SortPriority>
+          <SubMember />
+          <Title>Network</Title>
+        </HMIContentMap>
+        <HMIDockContentMap AssemblyName="TwinCAT.Analytics.Workbench.HMI">
+          <Comment />
+          <DisplayColor>Black</DisplayColor>
+          <Guid>91717083-2a31-4db8-b1c1-90df94f19e32</Guid>
+          <HMIPermissions>
+            <Comment />
+            <DisplayColor>Black</DisplayColor>
+            <Editors>
+              <HMIUserGroup>
+                <DefaultPermission>Editor</DefaultPermission>
+                <IsDefault>false</IsDefault>
+                <Name>Administrators</Name>
+                <RelatedGroups>
+                  <HMIUserGroup>
+                    <DefaultPermission>Editor</DefaultPermission>
+                    <IsDefault>true</IsDefault>
+                    <Name>__SystemAdministrators</Name>
+                    <RelatedGroups />
+                  </HMIUserGroup>
+                </RelatedGroups>
+              </HMIUserGroup>
+              <HMIUserGroup>
+                <DefaultPermission>Editor</DefaultPermission>
+                <IsDefault>false</IsDefault>
+                <Name>Users</Name>
+                <RelatedGroups>
+                  <HMIUserGroup>
+                    <DefaultPermission>Editor</DefaultPermission>
+                    <IsDefault>true</IsDefault>
+                    <Name>__SystemUsers</Name>
+                    <RelatedGroups />
+                  </HMIUserGroup>
+                </RelatedGroups>
+              </HMIUserGroup>
+            </Editors>
+            <Guid>3280e415-2c0e-45fc-8fe2-6bad57666d25</Guid>
+            <Name>MeasurementMemberBase</Name>
+            <NoAccess />
+            <SortPriority>100</SortPriority>
+            <Title>MeasurementMemberBase</Title>
+            <Viewers>
+              <HMIUserGroup>
+                <DefaultPermission>Viewer</DefaultPermission>
+                <IsDefault>false</IsDefault>
+                <Name>Guests</Name>
+                <RelatedGroups>
+                  <HMIUserGroup>
+                    <DefaultPermission>Viewer</DefaultPermission>
+                    <IsDefault>true</IsDefault>
+                    <Name>__SystemGuests</Name>
+                    <RelatedGroups />
+                  </HMIUserGroup>
+                </RelatedGroups>
+              </HMIUserGroup>
+            </Viewers>
+          </HMIPermissions>
+          <ID>10001</ID>
+          <Name>MeasurementMemberBase</Name>
+          <NetworkID>-1</NetworkID>
+          <ParentEnabled>true</ParentEnabled>
+          <SelfEnabled>true</SelfEnabled>
+          <SortPriority>0</SortPriority>
+          <SubMember />
+          <Title>Desktop Dock</Title>
+        </HMIDockContentMap>
+      </SubMember>
+      <Title>Dashboard</Title>
+      <UserGroupsInternal>
+        <HMIUserGroup>
+          <DefaultPermission>Editor</DefaultPermission>
+          <IsDefault>false</IsDefault>
+          <Name>Administrators</Name>
+          <RelatedGroups>
+            <HMIUserGroup>
+              <DefaultPermission>Editor</DefaultPermission>
+              <IsDefault>true</IsDefault>
+              <Name>__SystemAdministrators</Name>
+              <RelatedGroups />
+            </HMIUserGroup>
+          </RelatedGroups>
+        </HMIUserGroup>
+        <HMIUserGroup>
+          <DefaultPermission>Editor</DefaultPermission>
+          <IsDefault>false</IsDefault>
+          <Name>Users</Name>
+          <RelatedGroups>
+            <HMIUserGroup>
+              <DefaultPermission>Editor</DefaultPermission>
+              <IsDefault>true</IsDefault>
+              <Name>__SystemUsers</Name>
+              <RelatedGroups />
+            </HMIUserGroup>
+          </RelatedGroups>
+        </HMIUserGroup>
+        <HMIUserGroup>
+          <DefaultPermission>Viewer</DefaultPermission>
+          <IsDefault>false</IsDefault>
+          <Name>Guests</Name>
+          <RelatedGroups>
+            <HMIUserGroup>
+              <DefaultPermission>Viewer</DefaultPermission>
+              <IsDefault>true</IsDefault>
+              <Name>__SystemGuests</Name>
+              <RelatedGroups />
+            </HMIUserGroup>
+          </RelatedGroups>
+        </HMIUserGroup>
+      </UserGroupsInternal>
+      <Users />
+    </HMIDashboard>
+    <Analysis AssemblyName="TwinCAT.Analytics.Workbench">
+      <Comment />
+      <DisplayColor>Black</DisplayColor>
+      <Guid>a65e6ffe-4564-4a25-a8b4-0013ea8212bc</Guid>
+      <Name>MeasurementMemberBase</Name>
+      <SortPriority>100</SortPriority>
+      <SubMember />
+      <Title>MeasurementMemberBase</Title>
+    </Analysis>
+    <GalleryContainer AssemblyName="TwinCAT.Analytics.Workbench">
+      <Comment />
+      <DisplayColor>Black</DisplayColor>
+      <Guid>a8195ac4-2c11-4c0f-a162-1d0ce5f57d3c</Guid>
+      <Name>Vision Galleries</Name>
+      <SortPriority>2147483547</SortPriority>
+      <SubMember />
+      <Title>Vision Galleries</Title>
+    </GalleryContainer>
+  </SubMember>
+  <Title>Analytics Project</Title>
+  <UseScopeRecording>true</UseScopeRecording>
+  <Version>1.0.0.0</Version>
+</Project>

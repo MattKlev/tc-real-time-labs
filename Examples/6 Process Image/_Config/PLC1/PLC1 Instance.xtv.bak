@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.22" ClassName="CTComPlcObjDef">
+	<Instance TmcHash="{B62D8F66-263A-E4AE-AC0D-0BBA1B69BF79}">
+		<Vars VarGrpType="1">
+			<Name>Plc1Task Inputs</Name>
+			<Var>
+				<Name>PRG_PLC1.EncoderValue</Name>
+				<Type>UINT</Type>
+			</Var>
+		</Vars>
+	</Instance>
+</TcSmItem>
