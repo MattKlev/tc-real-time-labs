@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{08f384c5-3ac2-48e7-975b-d61c11257c6c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Data	:ARRAY[0..1_000_000-1] OF BYTE; // Will causes a cycle exceed when reading reading this
+	Data2	:ARRAY[0..150_000-1] OF BYTE; // Ok - but close to the edge
+	i		:DINT;
+	LogMark	:FB_RTMon_LogMark;
+	
+	OldValue	:BYTE;
+END_VAR
+
+//Powershell snippets to test - copy and paste into powershell 
+
+//Read
+(*
+$session = New-TcSession -NetId '192.168.1.102.1.1' -Port 851
+$symbol = $session | get-TcSymbol -Path 'MAIN.Data'
+$symbol | Read-TcValue |  Out-Null
+*)
+
+
+//Write
+(*
+$session = New-TcSession -NetId '192.168.1.102.1.1' -Port 851
+$symbol = $session | Get-TcSymbol -Path 'MAIN.Data2'
+[byte[]]$bytes = $symbol | Read-TcValue
+[byte[]]$incremented = $bytes | ForEach-Object { [byte](($_ + 1) % 256) }
+$symbol | Write-TcValue -Value $incremented -Force
+*)]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF _TaskInfo[GETCURTASKINDEXEX()].FirstCycle THEN
+	FOR i:=0 TO 1000000-1 DO
+		Data[i]:=TO_BYTE(i);
+	END_FOR
+END_IF
+
+//The ADS write happened
+IF Data2[0] <> 0 AND OldValue<> Data2[0] THEN
+	OldValue:=Data[0];
+	LogMark.LogSequenceStart(0,0);
+	LogMark.LogSequenceStop(0,0);
+END_IF
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
