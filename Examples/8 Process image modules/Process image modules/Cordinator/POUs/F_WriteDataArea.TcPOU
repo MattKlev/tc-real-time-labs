@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="F_WriteDataArea" Id="{03bb0555-bdc0-4dc4-9cea-0aae9b84d8b9}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_WriteDataArea : HRESULT
+VAR_INPUT
+	ObjectID : OTCID;
+	AreaNum	 : UDINT;
+	OffSet	 : UDINT;
+	Size	 : UDINT;
+	pData	 : PVOID;
+END_VAR
+
+VAR
+	_ipDataArea : ITCADI;
+	_hr			: HRESULT;
+	_pData		: POINTER TO PVOID;
+END_VAR
+
+VAR CONSTANT
+	IID_ITcADI : IID := TC_GLOBAL_IID_LIST.IID_ITcADI;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[_hr := S_OK;
+IF ObjectID = 0 THEN
+	_hr				:= E_AdsErr.DEVICE_INVALIDDATA;
+	F_WriteDataArea := _hr;
+	RETURN;
+END_IF
+
+_hr := FW_ObjMgr_GetObjectInstance(oid := ObjectID, iid := IID_ITcADI, ADR(_ipDataArea));
+IF _hr <> S_OK THEN
+	F_WriteDataArea := _hr;
+	RETURN;
+END_IF
+
+_hr := _ipDataArea.GetImagePtr(size	  := Size,
+							   offs	  := OffSet,
+							   adi_x  := AreaNum,
+							   ppData := ADR(_pData));
+
+IF _hr = S_OK THEN
+	MEMCPY(destAddr := _pData, srcAddr := pData, n := Size);
+	_hr := _ipDataArea.ReleaseImagePtr(_pData);
+END_IF
+
+_hr				:= FW_SafeRelease(ADR(_ipDataArea));
+F_WriteDataArea := _hr;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

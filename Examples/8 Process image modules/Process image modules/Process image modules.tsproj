@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.23">
+	<Project ProjectGUID="{923CBD7A-F62E-4927-86D0-D5ED0CE42649}" TargetNetId="192.168.1.102.1.1" Target64Bit="true" ShowHideConfigurations="#x387">
+		<System>
+			<Settings MaxCpus="4" NonWinCpus="2" RtLogMask="#x13e0007">
+				<Cpu CpuId="1"/>
+				<Cpu CpuId="2"/>
+				<Cpu CpuId="3"/>
+				<IoIdleTask Affinity="#x00000002"/>
+			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" Affinity="#x00000008" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{AB056B84-13CA-434D-B78D-E289D501FFD7}" Name="PLC1" PrjFilePath="PLC1\PLC1.plcproj" TmcFilePath="PLC1\PLC1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{3664C6C3-3881-5C62-FF05-FF4EB8401652}" TmcPath="PLC1\PLC1.tmc">
+					<Name>PLC1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>PRG_PLC1.ToPLC_X</Name>
+							<Type>UDINT</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>PRG_PLC1.FromPLC2</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>PRG_PLC1.FromPLC3</Name>
+							<Type>UDINT</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+							<SortOrder>10</SortOrder>
+						</Context>
+					</Contexts>
+					<InitSymbols>
+						<InitSymbol>
+							<Name>PRG_PLC1.ToPLC_X</Name>
+							<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+							<Data>00000000</Data>
+						</InitSymbol>
+					</InitSymbols>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project GUID="{2C231A49-4C17-46D7-84FE-DEBB4777CA08}" Name="PLC2" PrjFilePath="PLC2\PLC2.plcproj" TmcFilePath="PLC2\PLC2.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{88D1D5BA-5A19-8F5A-D491-894A6E3DDA59}" TmcPath="PLC2\PLC2.tmc">
+					<Name>PLC2 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>PRG_PLC2.ToPLC_X</Name>
+							<Type>UDINT</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>PRG_PLC2.FromPLC1</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>PRG_PLC2.FromPLC3</Name>
+							<Type>UDINT</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+							<SortOrder>20</SortOrder>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502041"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project GUID="{D827F53C-8854-432B-9782-7D484EAFD740}" Name="PLC3" PrjFilePath="PLC3\PLC3.plcproj" TmcFilePath="PLC3\PLC3.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{D8E6085C-3F45-D1E4-1C4B-C9B7471599AA}" TmcPath="PLC3\PLC3.tmc">
+					<Name>PLC3 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>PRG_PLC3.ToPLC_X</Name>
+							<Type>UDINT</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>PRG_PLC3.FromPLC1</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>PRG_PLC3.FromPLC2</Name>
+							<Type>UDINT</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+							<SortOrder>30</SortOrder>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502081"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project GUID="{6F8BCD7A-E4DF-4318-B133-4A68BBEC0E3F}" Name="Cordinator" PrjFilePath="Cordinator\Cordinator.plcproj" TmcFilePath="Cordinator\Cordinator.tmc" ReloadTmc="true" AmsPort="854" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x085020c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{A27A0F03-06B7-ACDE-929C-72D1198D735F}" TmcPath="Cordinator\Cordinator.tmc">
+					<Name>Cordinator Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+							<SortOrder>200</SortOrder>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x085020c1"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<PlcAuxTask Affinity="#x00000008"/>
+		</Plc>
+		<Io/>
+		<SymbolWatch>
+			<Variable>TIPC^PLC1^PLC1 Instance^PlcTask Outputs^PRG_PLC1.ToPLC_X</Variable>
+			<Variable>TIPC^PLC3^PLC3 Instance^PlcTask Outputs^PRG_PLC3.ToPLC_X</Variable>
+			<Variable>TIPC^PLC2^PLC2 Instance^PlcTask Outputs^PRG_PLC2.ToPLC_X</Variable>
+		</SymbolWatch>
+	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500840205008}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500880205008}" Id="#x02030020"/>
+		<MappingInfo Identifier="{00000000-2041-0850-4020-500880205008}" Id="#x02030030"/>
+		<OwnerA Name="TIPC^PLC1^PLC1 Instance">
+			<OwnerB Name="TIPC^PLC2^PLC2 Instance">
+				<Link VarA="PlcTask Inputs^PRG_PLC1.FromPLC2" VarB="PlcTask Outputs^PRG_PLC2.ToPLC_X"/>
+				<Link VarA="PlcTask Outputs^PRG_PLC1.ToPLC_X" VarB="PlcTask Inputs^PRG_PLC2.FromPLC1"/>
+			</OwnerB>
+			<OwnerB Name="TIPC^PLC3^PLC3 Instance">
+				<Link VarA="PlcTask Inputs^PRG_PLC1.FromPLC3" VarB="PlcTask Outputs^PRG_PLC3.ToPLC_X"/>
+				<Link VarA="PlcTask Outputs^PRG_PLC1.ToPLC_X" VarB="PlcTask Inputs^PRG_PLC3.FromPLC1"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIPC^PLC2^PLC2 Instance">
+			<OwnerB Name="TIPC^PLC3^PLC3 Instance">
+				<Link VarA="PlcTask Inputs^PRG_PLC2.FromPLC3" VarB="PlcTask Outputs^PRG_PLC3.ToPLC_X"/>
+				<Link VarA="PlcTask Outputs^PRG_PLC2.ToPLC_X" VarB="PlcTask Inputs^PRG_PLC3.FromPLC2"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>

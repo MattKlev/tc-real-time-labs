@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="TComGetModulesByClass" Id="{10a99585-bef0-495a-b2c3-02d441929602}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'hide_all_locals'}
+FUNCTION_BLOCK TComGetModulesByClass
+VAR_INPUT
+    Execute : BOOL;
+    ClassID : CLSID;
+    Library : STRING := ''; // [OPTIONAL] e.g. C++ Module Vendor|MyModule|0.0.0.1
+END_VAR
+
+VAR_IN_OUT
+    ObjectIDs : ARRAY [*] OF OTCID;
+END_VAR
+
+VAR_OUTPUT
+    Busy    : BOOL;
+    Error   : BOOL;
+    ErrorID : UDINT;
+    Count   : UDINT;
+END_VAR
+
+VAR
+    _onExecute          : R_TRIG;
+    _getModuleObjectIDs : ADSRDWRT;
+
+    _lowerBound : DINT;
+    _upperBound : DINT;
+    _dataSize   : UDINT;
+    i           : DINT;
+    _state      : (
+        IDLE,
+        EXEC,
+        DONE,
+        ERR
+    );
+    _classIdVersioned : CLSID;
+END_VAR
+
+VAR CONSTANT
+    EMPTY_CLASS_ID : CLSID := STRING_TO_GUID( '00000000-0000-0000-0000-000000000000' );
+	TCOM_OBJECT_SERVER_ADS_PORT : T_AmsPort := 10;
+	GET_MODULES_INDEX_GROUP : UDINT := 16#201;
+	GET_MODULES_INDEX_OfFSET : UDINT := 16#02;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[_onExecute( CLK := Execute );
+
+IF _onExecute.Q AND NOT Busy THEN
+    Error   := FALSE;
+    ErrorID := 0;
+    Count   := 0;
+
+    IF GuidsEqual( ADR( ClassID ), ADR( EMPTY_CLASS_ID ) ) THEN
+        Error   := TRUE;
+        ErrorID := E_AdsErr.DEVICE_INVALIDCLSID;
+        RETURN;
+    END_IF
+
+    IF ObjectIDs = 0 THEN
+        Error   := TRUE;
+        ErrorID := E_AdsErr.DEVICE_INVALIDDATA;
+        RETURN;
+    END_IF
+
+    _lowerBound := LOWER_BOUND( ObjectIDs, 1 );
+    _upperBound := UPPER_BOUND( ObjectIDs, 1 );
+
+    IF _lowerBound < 0 OR _upperBound < 0 THEN
+        Error   := TRUE;
+        ErrorID := E_AdsErr.DEVICE_INVALIDDATA;
+        RETURN;
+    END_IF
+
+	_dataSize := TO_UDINT( _upperBound - _lowerBound + 1 );
+
+    IF Library <> '' THEN
+		
+		IF FIND(Library, '|') = 0 THEN // invalid library format
+			Error   := TRUE;
+            ErrorID := E_AdsErr.DEVICE_INVALIDCLSID;
+            RETURN;
+		END_IF
+	
+        IF NOT F_GetClassIdVersioned( Library, ClassID, _classIdVersioned ) THEN
+            Error   := TRUE;
+            ErrorID := E_AdsErr.DEVICE_INVALIDCLSID;
+            RETURN;
+        END_IF
+	ELSE
+		_classIdVersioned := ClassID;
+    END_IF
+
+    Busy   := TRUE;
+    _state := EXEC;
+
+END_IF
+
+CASE _state OF
+
+    IDLE:
+		Busy := FALSE;
+		
+		IF NOT Execute THEN
+			Error := FALSE;
+			ErrorID := 0;
+			Count := 0;
+		END_IF
+
+    EXEC:
+
+        _getModuleObjectIDs(
+            NetID    := '',
+            Port     := TCOM_OBJECT_SERVER_ADS_PORT,
+            WRTRD    := TRUE,
+            IDXGRP   := GET_MODULES_INDEX_GROUP,
+            IDXOFFS  := GET_MODULES_INDEX_OfFSET,
+            WRITELEN := SIZEOF( _classIdVersioned ),
+            SRCADDR  := ADR( _classIdVersioned ),
+            READLEN  := (_dataSize * SIZEOF( OTCID )),
+            DESTADDR := ObjectIDs
+        );
+
+        IF NOT _getModuleObjectIDs.BUSY THEN
+            IF NOT _getModuleObjectIDs.ERR THEN
+
+                FOR i := _lowerBound TO _upperBound DO
+                    IF ObjectIDs[i] <> 0 THEN
+                        Count := Count + 1;
+                    END_IF
+                END_FOR
+
+                _state := DONE;
+            ELSE
+                ErrorID := _getModuleObjectIDs.ERRID;
+                _state  := ERR;
+            END_IF
+
+            _getModuleObjectIDs( WRTRD := FALSE );
+        END_IF
+
+    DONE:
+        Busy   := FALSE;
+        _state := IDLE;
+
+    ERR:
+        Error  := TRUE;
+        Busy   := FALSE;
+        _state := IDLE;
+
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

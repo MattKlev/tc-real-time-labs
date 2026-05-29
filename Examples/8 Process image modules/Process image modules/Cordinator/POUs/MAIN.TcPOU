@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{49817bb4-0b08-4338-b58d-69eee9f6626b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Step			: UDINT;
+	tonGetObjectIds : TON;
+	GetPlCInstances : TComGetModulesByClass; //Ask the object server for a list of object ID's based on the class ID.
+	ObjIds			: ARRAY[0..3] OF OTCID;	 // All PLC instances Object ID's - including this instnace
+	execute			: BOOL := FALSE;
+	ResetCounters	: BOOL;
+	NewCounterValue : UDINT;
+	i				: UDINT;
+END_VAR
+
+VAR CONSTANT
+	PLC_CLASS_ID : CLSID := STRING_TO_GUID('08500001-0000-0000-F000-000000000064');
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Automatic on system start - after a delay
+CASE Step OF
+	0:												//Wait for the system to startup
+		tonGetObjectIds(IN := execute, PT := T#5S); //All Modules should be online.
+		IF tonGetObjectIds.Q THEN
+			tonGetObjectIds(IN := FALSE);
+			Step := 10;
+		END_IF
+
+	10: //Ask for a list of PLC object ID's
+		GetPlCInstances(Execute := TRUE, ClassID := PLC_CLASS_ID, ObjectIDs := ObjIds);
+		IF NOT GetPlCInstances.Busy THEN
+			IF NOT GetPlCInstances.Error THEN
+				Step := 20;
+			END_IF
+		END_IF
+
+	20: //Check if we got Object ID's of all obecjts
+		Step := 30;
+		FOR i := 0 TO 3 DO
+			IF ObjIds[i] = 0 THEN
+				Step := 10; // Try again
+			END_IF
+		END_FOR
+
+	30: //Write the counters of all the PLC's to 0
+		FOR i := 0 TO 3 DO
+			IF ObjIds[i] <> _AppInfo.ObjId THEN
+				F_WriteDataArea(ObjectID := ObjIds[i],
+								AreaNum	 := 1,
+								OffSet	 := 387140,
+								Size	 := SIZEOF(NewCounterValue),
+								pData	 := ADR(NewCounterValue));
+			END_IF
+		END_FOR
+
+		Step := 40;
+
+	40:
+		//Manual contrl
+		IF ResetCounters THEN
+			ResetCounters := FALSE;
+			FOR i := 0 TO 3 DO
+				IF ObjIds[i] <> _AppInfo.ObjId THEN
+					F_WriteDataArea(ObjectID := ObjIds[i],
+									AreaNum	 := 1,
+									OffSet	 := 387140,
+									Size	 := SIZEOF(NewCounterValue),
+									pData	 := ADR(NewCounterValue));
+				END_IF
+			END_FOR
+		END_IF
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

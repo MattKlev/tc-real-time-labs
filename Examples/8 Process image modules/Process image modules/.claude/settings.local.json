@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find 'C:/Source/tc-real-time-labs/Examples/8 Process image modules/Process image modules' -name *.TcDUT -o -name README* -o -name *.txt -o -name *.md)",
+      "Bash(find 'C:/Source/tc-real-time-labs/Examples/8 Process image modules/Process image modules' -maxdepth 3 -type f \\\\\\(-name *.xml -o -name *.md -o -name *.txt \\\\\\))"
+    ]
+  }
+}

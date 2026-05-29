@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_PLC2" Id="{3be515ab-5df3-45e0-9907-45b32487d2f7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_PLC2
+VAR
+	ToPLC_X	  AT %Q* : UDINT;
+	FromPLC1  AT %I*  :UDINT;
+	FromPLC3  AT %I*  :UDINT;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_ConsumeTime(5);
+ToPLC_X := (ToPLC_X + 1) MOD 200;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
