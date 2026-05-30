@@ -5,7 +5,7 @@
     <CycleTime>10000</CycleTime>
     <Priority>20</Priority>
     <PouCall>
-      <Name>MAIN</Name>
+      <Name>PRG_PLC_Cordinator</Name>
     </PouCall>
     <TaskFBGuid>{6bac547c-2dc9-464e-b19d-80735801eae5}</TaskFBGuid>
     <Fb_init>{71fc8632-1c88-4167-a77b-0a6aafcb13f3}</Fb_init>

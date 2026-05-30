@@ -6,17 +6,20 @@
 				<Cpu CpuId="1"/>
 				<Cpu CpuId="2"/>
 				<Cpu CpuId="3"/>
-				<IoIdleTask Affinity="#x00000002"/>
+				<IoIdleTask Priority="17" Affinity="#x00000004"/>
 			</Settings>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" Affinity="#x00000008" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
+				<Task Id="4" Priority="15" CycleTime="100000" AmsPort="351" Affinity="#x00000004" AdtTasks="true">
+					<Name>cppTask</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{AB056B84-13CA-434D-B78D-E289D501FFD7}" Name="PLC1" PrjFilePath="PLC1\PLC1.plcproj" TmcFilePath="PLC1\PLC1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{3664C6C3-3881-5C62-FF05-FF4EB8401652}" TmcPath="PLC1\PLC1.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{8B63B01F-B06E-E749-EE5E-9FB8DE7E55E5}" TmcPath="PLC1\PLC1.tmc">
 					<Name>PLC1 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -49,20 +52,13 @@
 							<SortOrder>10</SortOrder>
 						</Context>
 					</Contexts>
-					<InitSymbols>
-						<InitSymbol>
-							<Name>PRG_PLC1.ToPLC_X</Name>
-							<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
-							<Data>00000000</Data>
-						</InitSymbol>
-					</InitSymbols>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
 			<Project GUID="{2C231A49-4C17-46D7-84FE-DEBB4777CA08}" Name="PLC2" PrjFilePath="PLC2\PLC2.plcproj" TmcFilePath="PLC2\PLC2.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{88D1D5BA-5A19-8F5A-D491-894A6E3DDA59}" TmcPath="PLC2\PLC2.tmc">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{1FC64C4E-2C9E-3E00-0259-0DA3226A8622}" TmcPath="PLC2\PLC2.tmc">
 					<Name>PLC2 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -101,7 +97,7 @@
 				</Instance>
 			</Project>
 			<Project GUID="{D827F53C-8854-432B-9782-7D484EAFD740}" Name="PLC3" PrjFilePath="PLC3\PLC3.plcproj" TmcFilePath="PLC3\PLC3.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{D8E6085C-3F45-D1E4-1C4B-C9B7471599AA}" TmcPath="PLC3\PLC3.tmc">
+				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{31DDC6B6-74FE-E882-8BFF-C7CEBBBFBAC3}" TmcPath="PLC3\PLC3.tmc">
 					<Name>PLC3 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -140,12 +136,21 @@
 				</Instance>
 			</Project>
 			<Project GUID="{6F8BCD7A-E4DF-4318-B133-4A68BBEC0E3F}" Name="Cordinator" PrjFilePath="Cordinator\Cordinator.plcproj" TmcFilePath="Cordinator\Cordinator.tmc" ReloadTmc="true" AmsPort="854" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x085020c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{A27A0F03-06B7-ACDE-929C-72D1198D735F}" TmcPath="Cordinator\Cordinator.tmc">
+				<Instance Id="#x085020c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{617F57C2-99FB-62FF-968B-84A8BD76003B}" TmcPath="Cordinator\Cordinator.tmc">
 					<Name>Cordinator Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
 						<Context>
 							<Id>0</Id>
+							<Name>cppTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010040</OTCID>
+							</ManualConfig>
+							<Priority>15</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+						<Context>
+							<Id>1</Id>
 							<Name>PlcTask</Name>
 							<ManualConfig>
 								<OTCID>#x02010030</OTCID>
@@ -156,12 +161,344 @@
 						</Context>
 					</Contexts>
 					<TaskPouOids>
+						<TaskPouOid Prio="15" OTCID="#x085020c2"/>
 						<TaskPouOid Prio="20" OTCID="#x085020c1"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
 			<PlcAuxTask Affinity="#x00000008"/>
 		</Plc>
+		<Cpp>
+			<Project GUID="{4AF04816-CB77-44A1-8C28-3F388D5571C8}" Name="cpp" PrjFilePath="cpp\cpp.vcxproj" TmcFilePath="cpp\cpp.tmc">
+				<Instance Id="#x01010010" KeepUnrestoredLinks="1" ClassFactoryId="C++ Module Vendor|cpp|0.0.0.1">
+					<Name>Obj1</Name>
+					<TmcDesc GUID="{AF3B890B-AB8A-4890-821A-879F3E9E0A3D}" ClassFactoryId="C++ Module Vendor|cpp|0.0.0.1">
+						<Name>Module1</Name>
+						<CLSID ClassFactory="cpp">{AF3B890B-AB8A-4890-821A-879F3E9E0A3D}</CLSID>
+						<Licenses>
+							<License>
+								<LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+							</License>
+						</Licenses>
+						<InitSequence>PSO</InitSequence>
+						<Contexts>
+							<Context>
+								<Id>1</Id>
+								<ManualConfig>
+									<OTCID>#x02010040</OTCID>
+								</ManualConfig>
+								<Priority>15</Priority>
+								<CycleTime>10000000</CycleTime>
+								<SortOrder>10</SortOrder>
+							</Context>
+						</Contexts>
+						<Interfaces>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+							</Interface>
+							<Interface>
+								<Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+							</Interface>
+						</Interfaces>
+						<Parameters>
+							<Parameter HideParameter="true">
+								<Name>TraceLevelMax</Name>
+								<Comment><![CDATA[Controls the amount of log messages.]]></Comment>
+								<BitSize>32</BitSize>
+								<BaseType GUID="{8007AE3B-86BB-40F2-B385-EF87FCC239A4}">TcTraceLevel</BaseType>
+								<PTCID>#x03002103</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+						</Parameters>
+						<DataAreas>
+							<DataArea>
+								<AreaNo AreaType="OutputDst" CreateSymbols="true">0</AreaNo>
+								<Name>Inputs</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>8</ByteSize>
+								<Symbol>
+									<Name>Counter1</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+								<Symbol>
+									<Name>Counter2</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>32</BitOffs>
+								</Symbol>
+							</DataArea>
+							<DataArea>
+								<AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
+								<Name>Outputs</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>4</ByteSize>
+								<Symbol>
+									<Name>ToX</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+							</DataArea>
+						</DataAreas>
+						<InterfacePointers>
+							<InterfacePointer>
+								<PTCID>#x03002060</PTCID>
+								<Name>CyclicCaller</Name>
+								<Type GUID="{0300001E-0000-0000-E000-000000000064}">ITcCyclicCaller</Type>
+							</InterfacePointer>
+						</InterfacePointers>
+						<ParameterValues>
+							<Value>
+								<Name>TraceLevelMax</Name>
+								<EnumText>tlAlways</EnumText>
+							</Value>
+						</ParameterValues>
+						<InterfacePointerValues>
+							<Value>
+								<Name>CyclicCaller</Name>
+								<OTCID>#x02010040</OTCID>
+							</Value>
+						</InterfacePointerValues>
+					</TmcDesc>
+					<UnrestoredVarLinks ImportTime="2026-05-29T23:24:22">
+						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj1" Type="1">
+							<OwnerB Name="TIXC^cpp^Obj2">
+								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+							</OwnerB>
+							<OwnerB Name="TIXC^cpp^Obj3">
+								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+				</Instance>
+				<Instance Id="#x01010020" KeepUnrestoredLinks="1" ClassFactoryId="C++ Module Vendor|cpp|0.0.0.1">
+					<Name>Obj2</Name>
+					<TmcDesc GUID="{AF3B890B-AB8A-4890-821A-879F3E9E0A3D}" ClassFactoryId="C++ Module Vendor|cpp|0.0.0.1">
+						<Name>Module1</Name>
+						<CLSID ClassFactory="cpp">{AF3B890B-AB8A-4890-821A-879F3E9E0A3D}</CLSID>
+						<Licenses>
+							<License>
+								<LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+							</License>
+						</Licenses>
+						<InitSequence>PSO</InitSequence>
+						<Contexts>
+							<Context>
+								<Id>1</Id>
+								<ManualConfig>
+									<OTCID>#x02010040</OTCID>
+								</ManualConfig>
+								<Priority>15</Priority>
+								<CycleTime>10000000</CycleTime>
+								<SortOrder>20</SortOrder>
+							</Context>
+						</Contexts>
+						<Interfaces>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+							</Interface>
+							<Interface>
+								<Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+							</Interface>
+						</Interfaces>
+						<Parameters>
+							<Parameter HideParameter="true">
+								<Name>TraceLevelMax</Name>
+								<Comment><![CDATA[Controls the amount of log messages.]]></Comment>
+								<BitSize>32</BitSize>
+								<BaseType GUID="{8007AE3B-86BB-40F2-B385-EF87FCC239A4}">TcTraceLevel</BaseType>
+								<PTCID>#x03002103</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+						</Parameters>
+						<DataAreas>
+							<DataArea>
+								<AreaNo AreaType="OutputDst" CreateSymbols="true">0</AreaNo>
+								<Name>Inputs</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>8</ByteSize>
+								<Symbol>
+									<Name>Counter1</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+								<Symbol>
+									<Name>Counter2</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>32</BitOffs>
+								</Symbol>
+							</DataArea>
+							<DataArea>
+								<AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
+								<Name>Outputs</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>4</ByteSize>
+								<Symbol>
+									<Name>ToX</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+							</DataArea>
+						</DataAreas>
+						<InterfacePointers>
+							<InterfacePointer>
+								<PTCID>#x03002060</PTCID>
+								<Name>CyclicCaller</Name>
+								<Type GUID="{0300001E-0000-0000-E000-000000000064}">ITcCyclicCaller</Type>
+							</InterfacePointer>
+						</InterfacePointers>
+						<ParameterValues>
+							<Value>
+								<Name>TraceLevelMax</Name>
+								<EnumText>tlAlways</EnumText>
+							</Value>
+						</ParameterValues>
+						<InterfacePointerValues>
+							<Value>
+								<Name>CyclicCaller</Name>
+								<OTCID>#x02010040</OTCID>
+							</Value>
+						</InterfacePointerValues>
+					</TmcDesc>
+					<UnrestoredVarLinks ImportTime="2026-05-29T23:24:23">
+						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj2" Type="1">
+							<OwnerB Name="TIXC^cpp^Obj1">
+								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+							</OwnerB>
+							<OwnerB Name="TIXC^cpp^Obj3">
+								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+				</Instance>
+				<Instance Id="#x01010030" KeepUnrestoredLinks="1" ClassFactoryId="C++ Module Vendor|cpp|0.0.0.1">
+					<Name>Obj3</Name>
+					<TmcDesc GUID="{AF3B890B-AB8A-4890-821A-879F3E9E0A3D}" ClassFactoryId="C++ Module Vendor|cpp|0.0.0.1">
+						<Name>Module1</Name>
+						<CLSID ClassFactory="cpp">{AF3B890B-AB8A-4890-821A-879F3E9E0A3D}</CLSID>
+						<Licenses>
+							<License>
+								<LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+							</License>
+						</Licenses>
+						<InitSequence>PSO</InitSequence>
+						<Contexts>
+							<Context>
+								<Id>1</Id>
+								<ManualConfig>
+									<OTCID>#x02010040</OTCID>
+								</ManualConfig>
+								<Priority>15</Priority>
+								<CycleTime>10000000</CycleTime>
+								<SortOrder>30</SortOrder>
+							</Context>
+						</Contexts>
+						<Interfaces>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+							</Interface>
+							<Interface>
+								<Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+							</Interface>
+							<Interface DisableCodeGeneration="true">
+								<Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+							</Interface>
+						</Interfaces>
+						<Parameters>
+							<Parameter HideParameter="true">
+								<Name>TraceLevelMax</Name>
+								<Comment><![CDATA[Controls the amount of log messages.]]></Comment>
+								<BitSize>32</BitSize>
+								<BaseType GUID="{8007AE3B-86BB-40F2-B385-EF87FCC239A4}">TcTraceLevel</BaseType>
+								<PTCID>#x03002103</PTCID>
+								<ContextId>1</ContextId>
+							</Parameter>
+						</Parameters>
+						<DataAreas>
+							<DataArea>
+								<AreaNo AreaType="OutputDst" CreateSymbols="true">0</AreaNo>
+								<Name>Inputs</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>8</ByteSize>
+								<Symbol>
+									<Name>Counter1</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+								<Symbol>
+									<Name>Counter2</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>32</BitOffs>
+								</Symbol>
+							</DataArea>
+							<DataArea>
+								<AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
+								<Name>Outputs</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>4</ByteSize>
+								<Symbol>
+									<Name>ToX</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+							</DataArea>
+						</DataAreas>
+						<InterfacePointers>
+							<InterfacePointer>
+								<PTCID>#x03002060</PTCID>
+								<Name>CyclicCaller</Name>
+								<Type GUID="{0300001E-0000-0000-E000-000000000064}">ITcCyclicCaller</Type>
+							</InterfacePointer>
+						</InterfacePointers>
+						<ParameterValues>
+							<Value>
+								<Name>TraceLevelMax</Name>
+								<EnumText>tlAlways</EnumText>
+							</Value>
+						</ParameterValues>
+						<InterfacePointerValues>
+							<Value>
+								<Name>CyclicCaller</Name>
+								<OTCID>#x02010040</OTCID>
+							</Value>
+						</InterfacePointerValues>
+					</TmcDesc>
+					<UnrestoredVarLinks ImportTime="2026-05-29T23:24:21">
+						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj3" Type="1">
+							<OwnerB Name="TIXC^cpp^Obj1">
+								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+							</OwnerB>
+							<OwnerB Name="TIXC^cpp^Obj2">
+								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+				</Instance>
+			</Project>
+		</Cpp>
 		<Io/>
 		<SymbolWatch>
 			<Variable>TIPC^PLC1^PLC1 Instance^PlcTask Outputs^PRG_PLC1.ToPLC_X</Variable>
@@ -187,6 +524,22 @@
 			<OwnerB Name="TIPC^PLC3^PLC3 Instance">
 				<Link VarA="PlcTask Inputs^PRG_PLC2.FromPLC3" VarB="PlcTask Outputs^PRG_PLC3.ToPLC_X"/>
 				<Link VarA="PlcTask Outputs^PRG_PLC2.ToPLC_X" VarB="PlcTask Inputs^PRG_PLC3.FromPLC2"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIXC^cpp^Obj1">
+			<OwnerB Name="TIXC^cpp^Obj2">
+				<Link VarA="Inputs^Counter1" VarB="Outputs^ToX"/>
+				<Link VarA="Outputs^ToX" VarB="Inputs^Counter1"/>
+			</OwnerB>
+			<OwnerB Name="TIXC^cpp^Obj3">
+				<Link VarA="Inputs^Counter2" VarB="Outputs^ToX"/>
+				<Link VarA="Outputs^ToX" VarB="Inputs^Counter1"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIXC^cpp^Obj2">
+			<OwnerB Name="TIXC^cpp^Obj3">
+				<Link VarA="Inputs^Counter2" VarB="Outputs^ToX"/>
+				<Link VarA="Outputs^ToX" VarB="Inputs^Counter2"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

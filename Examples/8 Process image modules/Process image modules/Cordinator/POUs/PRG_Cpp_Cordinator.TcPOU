@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="PRG_Cpp_Cordinator" Id="{6ef9e65c-57cf-418f-99ce-a1738c696bdc}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Cpp_Cordinator
+VAR
+	execute			: BOOL := FALSE;
+	Step			: UDINT;
+	GetPlCInstances : TComGetModulesByClass; //Ask the object server for a list of object ID's based on the class ID.
+	ObjIds			: ARRAY[0..2] OF OTCID;	 // All cpp instances Object ID's - including this instnace
+	NewCounterValue : UDINT;
+	i				: UDINT;
+END_VAR
+
+VAR CONSTANT
+	cpp_CLASS_ID : CLSID := STRING_TO_GUID('B7173B55-43BF-B00D-AA6B-FF13D43F5ECC');
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Automatic on system start - after a delay
+CASE Step OF
+	0: //Wait for the system to startup
+		IF execute THEN
+			execute := FALSE;
+			Step	:= 10;
+		END_IF
+
+	10: //Ask for a list of PLC object ID's
+		GetPlCInstances(Execute := TRUE, ClassID := cpp_CLASS_ID, ObjectIDs := ObjIds);
+		IF NOT GetPlCInstances.Busy THEN
+			IF NOT GetPlCInstances.Error THEN
+				Step := 20;
+			END_IF
+
+			GetPlCInstances(Execute := FALSE, ClassID := cpp_CLASS_ID, ObjectIDs := ObjIds);
+		END_IF
+
+	20: //Check if we got Object ID's of all obecjts
+		Step := 30;
+		FOR i := 0 TO 2 DO
+			IF ObjIds[i] = 0 THEN
+				Step := 10; // Try again
+			END_IF
+		END_FOR
+
+	30: //Write the counters of to 0
+		FOR i := 0 TO 2 DO
+			F_WriteDataArea(ObjectID := ObjIds[i],
+							AreaNum	 := 1,
+							OffSet	 := 0,
+							Size	 := SIZEOF(NewCounterValue),
+							pData	 := ADR(NewCounterValue));
+		END_FOR
+
+		Step := 40;
+
+	40:
+		;
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

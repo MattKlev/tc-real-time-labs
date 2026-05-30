@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <Task Name="cppTask" Id="{780110a4-1afc-422a-acad-f91e55435e95}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>15</Priority>
+    <PouCall>
+      <Name>PRG_Cpp_Cordinator</Name>
+    </PouCall>
+    <TaskFBGuid>{980e7f2e-d28c-463b-a946-9ac23eb064b9}</TaskFBGuid>
+    <Fb_init>{fd8965c0-f08f-4b07-908d-17418193ee7d}</Fb_init>
+    <Fb_exit>{e0c2628c-3dc9-47a7-b0bc-270dcbe45ede}</Fb_exit>
+    <CycleUpdate>{6490ba09-18e2-4648-86c3-30ed7a4b8add}</CycleUpdate>
+    <PostCycleUpdate>{de0ff4a5-4de2-4109-9966-902bad905415}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

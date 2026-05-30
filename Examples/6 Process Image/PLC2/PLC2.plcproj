@@ -9,7 +9,7 @@
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>PLC2</Name>
-    <ProgramVersion>3.1.4026.22</ProgramVersion>
+    <ProgramVersion>3.1.4026.23</ProgramVersion>
     <Application>{0e6eb53a-7441-434d-b19d-8d9c026a9680}</Application>
     <TypeSystem>{c49257df-6e58-4340-99d0-617e7a8c9376}</TypeSystem>
     <Implicit_Task_Info>{91f7524b-fe1b-462a-9b82-3e384a9b682b}</Implicit_Task_Info>
