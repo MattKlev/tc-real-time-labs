@@ -10,7 +10,7 @@
       <Children>
         <Node>
           <Title>DataPool</Title>
-          <Expanded>False</Expanded>
+          <Expanded>True</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
@@ -21,6 +21,18 @@
             </Node>
             <Node>
               <Title>Obj1.Inputs.Counter2</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+            <Node>
+              <Title>Obj1.Internal.Counter1</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+            <Node>
+              <Title>Obj1.Internal.Counter2</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
@@ -44,6 +56,18 @@
               <Children />
             </Node>
             <Node>
+              <Title>Obj2.Internal.Counter1</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+            <Node>
+              <Title>Obj2.Internal.Counter2</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+            <Node>
               <Title>Obj2.Outputs.ToX</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
@@ -57,6 +81,18 @@
             </Node>
             <Node>
               <Title>Obj3.Inputs.Counter2</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+            <Node>
+              <Title>Obj3.Internal.Counter1</Title>
+              <Expanded>False</Expanded>
+              <FileName></FileName>
+              <Children />
+            </Node>
+            <Node>
+              <Title>Obj3.Internal.Counter2</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
@@ -241,6 +277,18 @@
                   <FileName></FileName>
                   <Children />
                 </Node>
+                <Node>
+                  <Title>Counter1 - obj2</Title>
+                  <Expanded>False</Expanded>
+                  <FileName></FileName>
+                  <Children />
+                </Node>
+                <Node>
+                  <Title>Counter2 - obj 3</Title>
+                  <Expanded>False</Expanded>
+                  <FileName></FileName>
+                  <Children />
+                </Node>
               </Children>
             </Node>
             <Node>
@@ -256,6 +304,18 @@
                 </Node>
                 <Node>
                   <Title>Obj2.Inputs.Counter2 - Obj3 </Title>
+                  <Expanded>False</Expanded>
+                  <FileName></FileName>
+                  <Children />
+                </Node>
+                <Node>
+                  <Title>Counter1 - obj1</Title>
+                  <Expanded>False</Expanded>
+                  <FileName></FileName>
+                  <Children />
+                </Node>
+                <Node>
+                  <Title>Counter2 - obj3</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
@@ -279,13 +339,25 @@
                   <FileName></FileName>
                   <Children />
                 </Node>
+                <Node>
+                  <Title>Counter1 - obj 1</Title>
+                  <Expanded>False</Expanded>
+                  <FileName></FileName>
+                  <Children />
+                </Node>
+                <Node>
+                  <Title>Counter2 - obj 2</Title>
+                  <Expanded>False</Expanded>
+                  <FileName></FileName>
+                  <Children />
+                </Node>
               </Children>
             </Node>
           </Children>
         </Node>
         <Node>
           <Title>All Cpp Counters</Title>
-          <Expanded>False</Expanded>
+          <Expanded>True</Expanded>
           <FileName></FileName>
           <Children>
             <Node>

@@ -51,7 +51,7 @@
       </Parameters>
       <DataAreas>
         <DataArea>
-          <AreaNo CreateSymbols="true" AreaType="OutputDst">0</AreaNo>
+          <AreaNo CreateSymbols="true" AreaType="InputDst">0</AreaNo>
           <Name>Inputs</Name>
           <ContextId>1</ContextId>
           <ByteSize>8</ByteSize>
@@ -79,6 +79,24 @@
             <BitSize>32</BitSize>
             <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
             <BitOffs>0</BitOffs>
+          </Symbol>
+        </DataArea>
+        <DataArea>
+          <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
+          <Name>Internal</Name>
+          <ContextId>1</ContextId>
+          <ByteSize>8</ByteSize>
+          <Symbol CreateSymbol="true">
+            <Name>Counter1</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+            <BitOffs>0</BitOffs>
+          </Symbol>
+          <Symbol CreateSymbol="true">
+            <Name>Counter2</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+            <BitOffs>32</BitOffs>
           </Symbol>
         </DataArea>
       </DataAreas>

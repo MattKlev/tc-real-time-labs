@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.23">
-	<Project ProjectGUID="{923CBD7A-F62E-4927-86D0-D5ED0CE42649}" TargetNetId="192.168.1.102.1.1" Target64Bit="true" ShowHideConfigurations="#x387">
+	<Project ProjectGUID="{923CBD7A-F62E-4927-86D0-D5ED0CE42649}" TargetNetId="10.12.16.136.1.1" Target64Bit="true" ShowHideConfigurations="#x387">
 		<System>
 			<Settings MaxCpus="4" NonWinCpus="2" RtLogMask="#x13e0007">
-				<Cpu CpuId="1"/>
 				<Cpu CpuId="2"/>
 				<Cpu CpuId="3"/>
 				<IoIdleTask Priority="17" Affinity="#x00000004"/>
@@ -136,7 +135,7 @@
 				</Instance>
 			</Project>
 			<Project GUID="{6F8BCD7A-E4DF-4318-B133-4A68BBEC0E3F}" Name="Cordinator" PrjFilePath="Cordinator\Cordinator.plcproj" TmcFilePath="Cordinator\Cordinator.tmc" ReloadTmc="true" AmsPort="854" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x085020c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{617F57C2-99FB-62FF-968B-84A8BD76003B}" TmcPath="Cordinator\Cordinator.tmc">
+				<Instance Id="#x085020c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{4612B9D8-FB40-EF32-C065-813F0F5B7F8F}" TmcPath="Cordinator\Cordinator.tmc">
 					<Name>Cordinator Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
@@ -218,7 +217,7 @@
 						</Parameters>
 						<DataAreas>
 							<DataArea>
-								<AreaNo AreaType="OutputDst" CreateSymbols="true">0</AreaNo>
+								<AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
 								<Name>Inputs</Name>
 								<ContextId>1</ContextId>
 								<ByteSize>8</ByteSize>
@@ -247,6 +246,24 @@
 									<BitOffs>0</BitOffs>
 								</Symbol>
 							</DataArea>
+							<DataArea>
+								<AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
+								<Name>Internal</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>8</ByteSize>
+								<Symbol CreateSymbol="true">
+									<Name>Counter1</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+								<Symbol CreateSymbol="true">
+									<Name>Counter2</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>32</BitOffs>
+								</Symbol>
+							</DataArea>
 						</DataAreas>
 						<InterfacePointers>
 							<InterfacePointer>
@@ -268,13 +285,13 @@
 							</Value>
 						</InterfacePointerValues>
 					</TmcDesc>
-					<UnrestoredVarLinks ImportTime="2026-05-29T23:24:22">
-						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj1" Type="1">
+					<UnrestoredVarLinks ImportTime="2026-05-31T23:28:15">
+						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj1" Type="2">
 							<OwnerB Name="TIXC^cpp^Obj2">
-								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
 							</OwnerB>
 							<OwnerB Name="TIXC^cpp^Obj3">
-								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -327,7 +344,7 @@
 						</Parameters>
 						<DataAreas>
 							<DataArea>
-								<AreaNo AreaType="OutputDst" CreateSymbols="true">0</AreaNo>
+								<AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
 								<Name>Inputs</Name>
 								<ContextId>1</ContextId>
 								<ByteSize>8</ByteSize>
@@ -356,6 +373,24 @@
 									<BitOffs>0</BitOffs>
 								</Symbol>
 							</DataArea>
+							<DataArea>
+								<AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
+								<Name>Internal</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>8</ByteSize>
+								<Symbol CreateSymbol="true">
+									<Name>Counter1</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+								<Symbol CreateSymbol="true">
+									<Name>Counter2</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>32</BitOffs>
+								</Symbol>
+							</DataArea>
 						</DataAreas>
 						<InterfacePointers>
 							<InterfacePointer>
@@ -377,13 +412,13 @@
 							</Value>
 						</InterfacePointerValues>
 					</TmcDesc>
-					<UnrestoredVarLinks ImportTime="2026-05-29T23:24:23">
-						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj2" Type="1">
+					<UnrestoredVarLinks ImportTime="2026-05-31T23:28:19">
+						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj2" Type="2">
 							<OwnerB Name="TIXC^cpp^Obj1">
-								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
 							</OwnerB>
 							<OwnerB Name="TIXC^cpp^Obj3">
-								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -436,7 +471,7 @@
 						</Parameters>
 						<DataAreas>
 							<DataArea>
-								<AreaNo AreaType="OutputDst" CreateSymbols="true">0</AreaNo>
+								<AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
 								<Name>Inputs</Name>
 								<ContextId>1</ContextId>
 								<ByteSize>8</ByteSize>
@@ -465,6 +500,24 @@
 									<BitOffs>0</BitOffs>
 								</Symbol>
 							</DataArea>
+							<DataArea>
+								<AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
+								<Name>Internal</Name>
+								<ContextId>1</ContextId>
+								<ByteSize>8</ByteSize>
+								<Symbol CreateSymbol="true">
+									<Name>Counter1</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>0</BitOffs>
+								</Symbol>
+								<Symbol CreateSymbol="true">
+									<Name>Counter2</Name>
+									<BitSize>32</BitSize>
+									<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+									<BitOffs>32</BitOffs>
+								</Symbol>
+							</DataArea>
 						</DataAreas>
 						<InterfacePointers>
 							<InterfacePointer>
@@ -486,13 +539,13 @@
 							</Value>
 						</InterfacePointerValues>
 					</TmcDesc>
-					<UnrestoredVarLinks ImportTime="2026-05-29T23:24:21">
-						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj3" Type="1">
+					<UnrestoredVarLinks ImportTime="2026-05-31T23:28:20">
+						<OwnerA Name="Inputs" Prefix="TIXC^cpp^Obj3" Type="2">
 							<OwnerB Name="TIXC^cpp^Obj1">
-								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+								<Link VarA="Counter1" GrpA="Inputs" TypeA="UDINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
 							</OwnerB>
 							<OwnerB Name="TIXC^cpp^Obj2">
-								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
+								<Link VarA="Counter2" GrpA="Inputs" TypeA="UDINT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000008}" VarB="Outputs^ToX"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -509,6 +562,9 @@
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500840205008}" Id="#x02030010"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500880205008}" Id="#x02030020"/>
+		<MappingInfo Identifier="{00000000-0040-0201-1000-010120000101}" Id="#x02030040"/>
+		<MappingInfo Identifier="{00000000-0040-0201-1000-010130000101}" Id="#x02030060"/>
+		<MappingInfo Identifier="{00000000-0040-0201-2000-010130000101}" Id="#x02030080"/>
 		<MappingInfo Identifier="{00000000-2041-0850-4020-500880205008}" Id="#x02030030"/>
 		<OwnerA Name="TIPC^PLC1^PLC1 Instance">
 			<OwnerB Name="TIPC^PLC2^PLC2 Instance">
