@@ -12,7 +12,9 @@ VAR
 END_VAR
 
 VAR CONSTANT
-	PLC_CLASS_ID : CLSID := STRING_TO_GUID('08500001-0000-0000-F000-000000000064');
+	PLC_CLASS_ID  : CLSID := STRING_TO_GUID('08500001-0000-0000-F000-000000000064');
+	DATA_AREA_NUM : UDINT := 1;
+	OFFSET		  : UDINT := 387124;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[CASE Step OF
@@ -44,8 +46,8 @@ END_VAR]]></Declaration>
 		FOR i := 0 TO 3 DO
 			IF ObjIds[i] <> _AppInfo.ObjId THEN
 				F_WriteDataArea(ObjectID := ObjIds[i],
-								AreaNum	 := 1,
-								OffSet	 := 387124,
+								AreaNum	 := DATA_AREA_NUM,
+								OffSet	 := OFFSET,
 								Size	 := SIZEOF(NewCounterValue),
 								pData	 := ADR(NewCounterValue));
 			END_IF
@@ -54,6 +56,7 @@ END_VAR]]></Declaration>
 		Step := 40;
 
 	40:
+	;
 END_CASE]]></ST>
     </Implementation>
   </POU>

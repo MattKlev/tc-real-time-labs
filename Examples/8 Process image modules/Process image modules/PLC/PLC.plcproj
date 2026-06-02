@@ -8,7 +8,7 @@
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>PLC1</Name>
+    <Name>PLC</Name>
     <ProgramVersion>3.1.4026.23</ProgramVersion>
     <Application>{46088025-c1fa-47f0-9a53-5aafb95f0686}</Application>
     <TypeSystem>{ec2d2c04-ffe0-42af-95d2-b8ca0f092de2}</TypeSystem>
@@ -24,7 +24,7 @@
     <Compile Include="POUs\F_ConsumeTime.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\PRG_PLC1.TcPOU">
+    <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -52,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="PLC1.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PLC.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>

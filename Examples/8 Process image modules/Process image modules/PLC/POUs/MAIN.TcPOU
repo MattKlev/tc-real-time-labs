@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{008ff7e3-702c-4b23-834b-f8aafcce3fa4}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Counter AT %Q* : UDINT;
+	In_1	AT %I* : UDINT;
+	In_2	AT %I* : UDINT;
+	
+	{attribute 'TcInitSymbol'}
+	TimeToConsume :UDINT:=10;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[F_ConsumeTime(TimeToConsume);
+Counter := (Counter + 1) MOD 200;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

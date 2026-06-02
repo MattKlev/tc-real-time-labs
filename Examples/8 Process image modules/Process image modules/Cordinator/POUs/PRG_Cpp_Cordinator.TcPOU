@@ -13,6 +13,8 @@ END_VAR
 
 VAR CONSTANT
 	cpp_CLASS_ID : CLSID := STRING_TO_GUID('B7173B55-43BF-B00D-AA6B-FF13D43F5ECC');
+	DATA_AREA_NUM : UDINT := 1;
+	OFFSET		  : UDINT := 0;	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Automatic on system start - after a delay
@@ -44,8 +46,8 @@ CASE Step OF
 	30: //Write the counters of to 0
 		FOR i := 0 TO 2 DO
 			F_WriteDataArea(ObjectID := ObjIds[i],
-							AreaNum	 := 1,
-							OffSet	 := 0,
+							AreaNum	 := DATA_AREA_NUM,
+							OffSet	 := OFFSET,
 							Size	 := SIZEOF(NewCounterValue),
 							pData	 := ADR(NewCounterValue));
 		END_FOR

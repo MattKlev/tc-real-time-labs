@@ -10,21 +10,9 @@
       <Children>
         <Node>
           <Title>DataPool</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
-            <Node>
-              <Title>Obj1.Inputs.Counter1</Title>
-              <Expanded>False</Expanded>
-              <FileName></FileName>
-              <Children />
-            </Node>
-            <Node>
-              <Title>Obj1.Inputs.Counter2</Title>
-              <Expanded>False</Expanded>
-              <FileName></FileName>
-              <Children />
-            </Node>
             <Node>
               <Title>Obj1.Internal.Counter1</Title>
               <Expanded>False</Expanded>
@@ -39,18 +27,6 @@
             </Node>
             <Node>
               <Title>Obj1.Outputs.ToX</Title>
-              <Expanded>False</Expanded>
-              <FileName></FileName>
-              <Children />
-            </Node>
-            <Node>
-              <Title>Obj2.Inputs.Counter1</Title>
-              <Expanded>False</Expanded>
-              <FileName></FileName>
-              <Children />
-            </Node>
-            <Node>
-              <Title>Obj2.Inputs.Counter2</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
@@ -74,18 +50,6 @@
               <Children />
             </Node>
             <Node>
-              <Title>Obj3.Inputs.Counter1</Title>
-              <Expanded>False</Expanded>
-              <FileName></FileName>
-              <Children />
-            </Node>
-            <Node>
-              <Title>Obj3.Inputs.Counter2</Title>
-              <Expanded>False</Expanded>
-              <FileName></FileName>
-              <Children />
-            </Node>
-            <Node>
               <Title>Obj3.Internal.Counter1</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
@@ -104,55 +68,55 @@
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC1.FromPLC2</Title>
+              <Title>PLC1 MAIN.In_1 - PLC2</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC1.FromPLC3</Title>
+              <Title>PLC1 MAIN.In_2 - PLC3</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC1.ToPLC_X</Title>
+              <Title>PLC2 MAIN.In_1 - PLC1</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC2.FromPLC1</Title>
+              <Title>PLC2 MAIN.In_2 - PLC3</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC2.FromPLC3</Title>
+              <Title>PLC3 MAIN.In_1 - PLC1</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC2.ToPLC_X</Title>
+              <Title>PLC3 MAIN.In_1 - PLC2</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC3.FromPLC1</Title>
+              <Title>PLC 1 MAIN.Counter</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC3.FromPLC2</Title>
+              <Title>PLC 2 MAIN.Counter</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
             </Node>
             <Node>
-              <Title>PRG_PLC3.ToPLC_X</Title>
+              <Title>PLC 3 MAIN.Counter</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children />
@@ -161,22 +125,22 @@
         </Node>
         <Node>
           <Title>PLC Counter compare</Title>
-          <Expanded>False</Expanded>
+          <Expanded>True</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
-              <Title>PLC1</Title>
+              <Title>PLC Instance 1</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
-                  <Title>PRG_PLC1.FromPLC2</Title>
+                  <Title>PLC1 MAIN.In_1 - PLC2</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
                 </Node>
                 <Node>
-                  <Title>PRG_PLC1.FromPLC3</Title>
+                  <Title>PLC1 MAIN.In_2 - PLC3</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
@@ -184,18 +148,18 @@
               </Children>
             </Node>
             <Node>
-              <Title>PLC2</Title>
+              <Title>PLC Instance  2</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
-                  <Title>PRG_PLC2.FromPLC1</Title>
+                  <Title>PLC2 MAIN.In_1 - PLC1</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
                 </Node>
                 <Node>
-                  <Title>PRG_PLC2.FromPLC3</Title>
+                  <Title>PLC2 MAIN.In_2 - PLC3</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
@@ -203,18 +167,18 @@
               </Children>
             </Node>
             <Node>
-              <Title>PLC3</Title>
+              <Title>PLC Instance  3</Title>
               <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
-                  <Title>PRG_PLC3.FromPLC1</Title>
+                  <Title>PLC3 MAIN.In_1 - PLC1</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
                 </Node>
                 <Node>
-                  <Title>PRG_PLC3.FromPLC2</Title>
+                  <Title>PLC3 MAIN.In_1 - PLC2</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
@@ -234,19 +198,19 @@
               <FileName></FileName>
               <Children>
                 <Node>
-                  <Title>PRG_PLC1.ToPLC_X</Title>
+                  <Title>PLC 1 MAIN.Counter</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
                 </Node>
                 <Node>
-                  <Title>PRG_PLC2.ToPLC_X</Title>
+                  <Title>PLC 2 MAIN.Counter</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
                 </Node>
                 <Node>
-                  <Title>PRG_PLC3.ToPLC_X</Title>
+                  <Title>PLC 3 MAIN.Counter</Title>
                   <Expanded>False</Expanded>
                   <FileName></FileName>
                   <Children />
@@ -257,26 +221,14 @@
         </Node>
         <Node>
           <Title>Cpp Counter compare</Title>
-          <Expanded>False</Expanded>
+          <Expanded>True</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>obj1</Title>
-              <Expanded>False</Expanded>
+              <Expanded>True</Expanded>
               <FileName></FileName>
               <Children>
-                <Node>
-                  <Title>Obj1.Inputs.Counter1 - Obj2 </Title>
-                  <Expanded>False</Expanded>
-                  <FileName></FileName>
-                  <Children />
-                </Node>
-                <Node>
-                  <Title>Obj1.Inputs.Counter2 - Obj3 </Title>
-                  <Expanded>False</Expanded>
-                  <FileName></FileName>
-                  <Children />
-                </Node>
                 <Node>
                   <Title>Counter1 - obj2</Title>
                   <Expanded>False</Expanded>
@@ -293,21 +245,9 @@
             </Node>
             <Node>
               <Title>obj2</Title>
-              <Expanded>False</Expanded>
+              <Expanded>True</Expanded>
               <FileName></FileName>
               <Children>
-                <Node>
-                  <Title>Obj2.Inputs.Counter1 - Obj1</Title>
-                  <Expanded>False</Expanded>
-                  <FileName></FileName>
-                  <Children />
-                </Node>
-                <Node>
-                  <Title>Obj2.Inputs.Counter2 - Obj3 </Title>
-                  <Expanded>False</Expanded>
-                  <FileName></FileName>
-                  <Children />
-                </Node>
                 <Node>
                   <Title>Counter1 - obj1</Title>
                   <Expanded>False</Expanded>
@@ -324,21 +264,9 @@
             </Node>
             <Node>
               <Title>obj3</Title>
-              <Expanded>False</Expanded>
+              <Expanded>True</Expanded>
               <FileName></FileName>
               <Children>
-                <Node>
-                  <Title>Obj3.Inputs.Counter1 - Obj1 </Title>
-                  <Expanded>False</Expanded>
-                  <FileName></FileName>
-                  <Children />
-                </Node>
-                <Node>
-                  <Title>Obj3.Inputs.Counter2 - Obj2 </Title>
-                  <Expanded>False</Expanded>
-                  <FileName></FileName>
-                  <Children />
-                </Node>
                 <Node>
                   <Title>Counter1 - obj 1</Title>
                   <Expanded>False</Expanded>
@@ -357,12 +285,12 @@
         </Node>
         <Node>
           <Title>All Cpp Counters</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>All Cpp Counters</Title>
-              <Expanded>False</Expanded>
+              <Expanded>True</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
