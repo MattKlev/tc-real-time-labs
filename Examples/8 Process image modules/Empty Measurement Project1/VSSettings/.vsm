@@ -5,7 +5,7 @@
   <Children>
     <Node>
       <Title>Scope Project1</Title>
-      <Expanded>True</Expanded>
+      <Expanded>False</Expanded>
       <FileName>C:\Source\tc-real-time-labs\Examples\8 Process image modules\Empty Measurement Project1\Scope Project1.tcscopex</FileName>
       <Children>
         <Node>
@@ -125,7 +125,7 @@
         </Node>
         <Node>
           <Title>PLC Counter compare</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
@@ -189,7 +189,7 @@
         </Node>
         <Node>
           <Title>All PLC Counters</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
@@ -221,12 +221,12 @@
         </Node>
         <Node>
           <Title>Cpp Counter compare</Title>
-          <Expanded>True</Expanded>
+          <Expanded>False</Expanded>
           <FileName></FileName>
           <Children>
             <Node>
               <Title>obj1</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -245,7 +245,7 @@
             </Node>
             <Node>
               <Title>obj2</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -264,7 +264,7 @@
             </Node>
             <Node>
               <Title>obj3</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>
@@ -290,7 +290,7 @@
           <Children>
             <Node>
               <Title>All Cpp Counters</Title>
-              <Expanded>True</Expanded>
+              <Expanded>False</Expanded>
               <FileName></FileName>
               <Children>
                 <Node>

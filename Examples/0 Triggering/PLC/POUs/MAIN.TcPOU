@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
+  <POU Name="MAIN" Id="{ddfef5fe-ec00-4fb8-bb65-46ffcfd540a1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Execute : BOOL;
+	Step	: UDINT;
+	LogMark : FB_RTMon_LogMark;
+END_VAR
+(*
+In Realtime monitor,
+Add a user contex:
+Context ID : 851 (0x353)
+
+Add new user group :
+Group ID: 0
+
+*)]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF Execute THEN
+	Execute := FALSE;
+	LogMark.LogStart(0, 0);
+	LogMark.LogTrigger(0, 0);
+	F_ConsumeTime(100);
+	LogMark.LogMark(0, 10);
+	F_ConsumeTime(100);
+	LogMark.LogMark(0, 20);
+	F_ConsumeTime(100);
+	LogMark.LogStop(0, 0);
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
